@@ -54,7 +54,7 @@ BRUSHED.slider = function(){
 		start_slide             :   1,			// Start slide (0 is random)
 		stop_loop				:	0,			// Pauses slideshow on last slide
 		random					: 	0,			// Randomize slide order (Ignores start slide)
-		slide_interval          :   12000,		// Length between transitions
+		slide_interval          :   10000,		// Length between transitions
 		transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 		transition_speed		:	300,		// Speed of transition
 		new_window				:	1,			// Image links open in new window/tab
@@ -77,10 +77,10 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content"><img src="./_include/img/logo.png" alt=""/></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content"><img src="./_include/img/logo.png" alt=""/></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content"><img src="./_include/img/logo.png" alt=""/></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content"><img src="./_include/img/logo.png" alt=""/></div>', thumb : '', url : ''}
+											{image : '_include/img/slider-images/img01.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/img02.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/img03.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
+//											{image : '_include/img/slider-images/img04.jpg', title : '<div class="slide-content"><img src="./_include/img/logo.png" alt=""/></div>', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   
@@ -187,30 +187,30 @@ BRUSHED.fancyBox = function(){
    Contact Form
 ================================================== */
 
-BRUSHED.contactForm = function(){
-	$("#contact-submit").on('click',function() {
-		$contact_form = $('#contact-form');
-		
-		var fields = $contact_form.serialize();
-		
-		$.ajax({
-			type: "POST",
-			url: "_include/php/contact.php",
-			data: fields,
-			dataType: 'json',
-			success: function(response) {
-				
-				if(response.status){
-					$('#contact-form input').val('');
-					$('#contact-form textarea').val('');
-				}
-				
-				$('#response').empty().html(response.html);
-			}
-		});
-		return false;
-	});
-}
+//BRUSHED.contactForm = function(){
+//	$("#contact-submit").on('click',function() {
+//		$contact_form = $('#contact-form');
+//
+//		var fields = $contact_form.serialize();
+//
+//		$.ajax({
+//			type: "POST",
+//			url: "_include/php/contact.php",
+//			data: fields,
+//			dataType: 'json',
+//			success: function(response) {
+//
+//				if(response.status){
+//					$('#contact-form input').val('');
+//					$('#contact-form textarea').val('');
+//				}
+//
+//				$('#response').empty().html(response.html);
+//			}
+//		});
+//		return false;
+//	});
+//}
 
 
 /* ==================================================
@@ -249,7 +249,7 @@ BRUSHED.goSection = function(){
 BRUSHED.goUp = function(){
 	$('#goUp').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
-		
+
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
@@ -359,7 +359,7 @@ BRUSHED.toggle = function(){
 
 BRUSHED.toolTip = function(){ 
     $('a[data-toggle=tooltip]').tooltip();
-}
+};
 
 
 /* ==================================================
@@ -405,7 +405,7 @@ $(document).ready(function(){
 	BRUSHED.goUp();
 	BRUSHED.filter();
 	BRUSHED.fancyBox();
-	BRUSHED.contactForm();
+//	BRUSHED.contactForm();
 	BRUSHED.scrollToTop();
 	BRUSHED.utils();
 	BRUSHED.accordion();

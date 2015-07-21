@@ -1,48 +1,48 @@
 @media (min-width: 768px) and (max-width: 979px) {
 	#menu {
-		display: none;	
+		display: none;
 	}
-	
+
 	#mobile-nav {
     	display: block;
 		float: right;
 	}
-	
+
 	#menu-nav-mobile {
 		margin: 0;
 	}
-	
+
 	header .sticky-nav #mobile-nav,
 	header .sticky-nav.stuck #mobile-nav {
-		margin-right: 20px;	
+		margin-right: 20px;
 	}
-	
+
 	#social-area #social ul li {
 		margin-left: 15px;
 	}
-	
+
 	#social-area #social ul li a {
 		width: 50px;
 		height: 50px;
 	}
-	
+
 	#social-area #social ul li a span {
 		font-size: 24px;
 		line-height: 50px;
 	}
-	
+
 	#twitter-feed {
 		padding-top: 110px;
-		padding-bottom: 110px;	
+		padding-bottom: 110px;
 	}
-	
+
 	.info-block a.button {
     	margin-top: 20px;
     	position: inherit;
 	}
-	
+
 	.info-text {
-		padding-right: 0;	
+		padding-right: 0;
 	}
 }
 
@@ -396,8 +396,7 @@
   	only screen and (min-resolution: 2dppx) {
 		
 		header #logo a {
-			background-image: url(../img/logo_@2x.png);
-			background-size: 96px 30px;
+			background-image: url(../img/logo.png);
 		}
 		
 		.menu-nav {
