@@ -420,7 +420,6 @@ $("#li1").click(function(){
 $("#li2").click(function(){
     location.href="index-English.html"
 });
-
 /* ==================================================
  Contact Form
  ================================================== */
@@ -445,20 +444,84 @@ $("#contact-submit").on('click',function() {
         $("#contact_message").focus();
     }
     else{
+        var mes=judgePage();
         $.ajax({
             type: "post",
             url: "",
             data: fields,
             dataType: 'json',
-            success: function(response) {
-                if(response.status){
+            beforeSend: function myfunction() {
+                modalLoading(mes.beforeAjaxMsg);
+            },
+            error:function () {
+                bootbox.hideAll();
+                finAlert(mes.errorMsg, false);
+            },
+            success: function(data) {
+                if(data){
+                    bootbox.hideAll();
                     $('#contact-form input').val('');
                     $('#contact-form textarea').val('');
+                }else{
+                    finAlert(data.Msg, false);
                 }
-                $('#response').empty().html(response.html);
             }
         });
     }
     return false;
 });
+function judgePage(){
+    var url = window.location.href.split("/");
+    var len=parseInt(url.length);
+    var page= url[len-1];
+    var mes;
+    if(page=="index.html"){
+        mes=({
+            beforeAjaxMsg:"正在提交数据，请稍候....",
+            errorMsg:"提交数据过程中出现错误，请检查数据后重试提交。"
+        })
+    }else{
+        mes=({
+            beforeAjaxMsg:"Are submitting data, please wait...",
+            errorMsg:"Submit data in error, please retry after checking data."
+        })
+    }
+    return mes;
+}
+function modalLoading(msg) {
+    if ('undefined' == typeof (document.body.style.maxHeight)) {
+        return;
+    }
+    bootbox.dialog({
+        title: $(document).attr('title'),
+        message: '<img src="_include/img/ajax-loader2.gif" />' + msg,
+        animate: false,
+        buttons: {}
+    });
+}
+function finAlert(message, issuccess, config) {
+    if ('undefined' == typeof (document.body.style.maxHeight)) {
+        alert(message);
+        return;
+    }
+    Messenger.options = {
+        extraClasses: 'messenger-fixed messenger-theme-flat messenger-on-top',
+        theme: 'future'
+    };
+    var msgConfig = $.extend({
+        message: message,
+        type: 'error',
+        hideAfter: 10,
+        hideOnNavigate: true,
+        showCloseButton: true
+    }, config);
+    if (issuccess == false) {
+        Messenger().post(msgConfig);
+    }
+    else {
+        msgConfig.type = "success";
+        Messenger().post(msgConfig);
+    }
+}
+
 

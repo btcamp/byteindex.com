@@ -1657,3 +1657,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     font-size: 40px;
     color: white;
 }
+.modal-body{
+    height: 60px;
+    line-height: 60px;
+}
