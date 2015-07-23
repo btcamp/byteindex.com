@@ -310,15 +310,15 @@ BRUSHED.utils = function(){
 
 BRUSHED.accordion = function(){
 	var accordion_trigger = $('.accordion-heading.accordionize');
-	
+
 	accordion_trigger.delegate('.accordion-toggle','click', function(event){
 		if($(this).hasClass('active')){
 			$(this).removeClass('active');
 		   	$(this).addClass('inactive');
 		}
 		else{
-		  	accordion_trigger.find('.active').addClass('inactive');          
-		  	accordion_trigger.find('.active').removeClass('active');   
+		  	accordion_trigger.find('.active').addClass('inactive');
+		  	accordion_trigger.find('.active').removeClass('active');
 		  	$(this).removeClass('inactive');
 		  	$(this).addClass('active');
 	 	}
@@ -362,23 +362,6 @@ BRUSHED.toolTip = function(){
 BRUSHED.slider();
 
 $(document).ready(function(){
-//	Modernizr.load([
-//        {
-//            test: Modernizr.placeholder,
-//            nope: '_include/js/placeholder.js',
-//            complete : function() {
-//                if (!Modernizr.placeholder) {
-//                    Placeholders.init({
-//                        live: true,
-//                        hideOnFocus: false,
-//                        className: "yourClass",
-//                        textColor: "#999"
-//                    });
-//                }
-//            }
-//        }
-//    ]);
-
 	// Preload the page with jPreLoader
 	$('body').jpreLoader({
 		splashID: "#jSplash",
