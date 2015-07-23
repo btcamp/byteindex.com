@@ -16,7 +16,7 @@
 <!-- Mobile Specifics -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="HandheldFriendly" content="true"/>
-<meta name="MobileOptimized" content="320"/>   
+<meta name="MobileOptimized" content="320"/>
 
 <!-- Mobile Internet Explorer ClearType Technology -->
 <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
@@ -81,12 +81,23 @@
 
 
 <body>
+
+<!-- Our Work Section -->
+<!-- This section is for Splash Screen -->
+<div class="ole">
+    <section id="jSplash">
+	    <div id="circle"></div>
+    </section>
+</div>
+<!-- End of Splash Screen -->
 <!-- Header -->
 <header id="home">
     <div class="sticky-nav">
         <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         <div id="logo">
-            <a id="goUp" href="#home"></a>
+            <a id="goUp" href="#home">
+                <!--<img src="_include/img/logo_small.png" alt="" height="100%"/>-->
+            </a>
         </div>
         <nav id="menu">
             <ul id="menu-nav">
@@ -98,31 +109,15 @@
                 <li id="turn" class="language">
                     <p>语言</p>
                     <ul>
-                        <li class="li1" id="li1"><a href>English</a></li>
-                        <li class="li2" id="li2"><a href>简体中文</a></li>
+                        <li class="li1" id="li1"><a href>简体中文</a></li>
+                        <li class="li2" id="li2"><a href>English</a></li>
                     </ul>
                 </li>
-                <script>
-                    document.getElementById("li1").onclick=function(){
-                        location.href="index-English.html"
-                    };
-                    document.getElementById("li2").onclick=function(){
-                        location.href="index.html"
-                    };
-                </script>
             </ul>
         </nav>
     </div>
 </header>
-<!-- Our Work Section -->
-<!-- This section is for Splash Screen -->
-<div class="ole">
-    <section id="jSplash">
-	    <div id="circle"></div>
-    </section>
-</div>
-<!-- End of Splash Screen -->
-
+<!-- End Header -->
 <!-- Homepage Slider -->
 <div id="home-slider">	
     <div class="overlay"></div>
@@ -138,7 +133,7 @@
 </div>
 <!-- End Homepage Slider -->
 <!-- superiority Section -->
-<div id="superiority" class="page-alternate">
+<div id="superiority" class="page-alternate technology">
     <div class="container">
         <!-- Title Page -->
         <div class="row">
@@ -156,96 +151,72 @@
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">一站式经纪商解决方案</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/01.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>一站式经纪商解决方案</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">多通道银行对冲订单瞬间完成</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/02.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>多通道银行对冲订单瞬间完成</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">多达187种可交易资产</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/03.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>多达187种可交易资产</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">每秒30次的报价刷新频率</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/04.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>每秒30次的报价刷新频率</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">对接交易系统后台的CRM管理系统</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/05.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>对接交易系统后台的CRM管理系统</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">提供移动网页版、微信版交易平台</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/06.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>提供移动网页版、微信版交易平台</span>
                 </div>
             </div>
 
@@ -255,96 +226,72 @@
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">提供MT4、FIX-API、HOTSPOT、EBS交易系统</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/07.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>提供MT4、FIX-API、HOTSPOT、EBS交易系统</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/08.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">提供海外公司、支付接口、海外银行办理通道</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/09.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">提供制作专业双语网站服务, 专业人员岗前培训和日常业务培训。</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/10.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>提供制作专业双语网站服务、专业人员岗前培训和日常业务培训</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">提供国际5A级机房托管高性能服务器</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/11.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>提供国际5A级机房托管高性能服务器</span>
                 </div>
             </div>
             <div class="span2 profile">
                 <div class="image-wrap">
                     <div class="hover-wrap">
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb">专业在线客服系统</span>
+                        <span class="overlay-text-thumb"></span>
                     </div>
                     <img src="_include/img/advantages/12.jpg" alt="">
                 </div>
                 <div class="social">
-                    <ul class="social-icons">
-                        <li><a><i class="font-icon-social-twitter"></i></a></li>
-                        <li><a><i class="font-icon-social-dribbble"></i></a></li>
-                        <li><a><i class="font-icon-social-facebook"></i></a></li>
-                    </ul>
+                    <span>专业在线客服系统</span>
                 </div>
             </div>
         </div>
@@ -381,11 +328,10 @@
             </div>
             <div class="span3 profile">
                 <div class="image-wrap">
-                    <img src="_include/img/solution/021.jpg" alt="">
+                    <img src="_include/img/solution/02.jpg" alt="">
                 </div>
                 <h3 class="profile-name">二元期权平台解决方案</h3>
                 <p class="profile-description">基于MT4交易系统插件或独立二元期权方案+高速数据源+合规监管+专业网站+CRM客户关系管理系统+资金托管解决方案。</p>
-
                 <div class="social">
                     <ul class="social-icons">
                         <li><a><i class="font-icon-social-twitter"></i></a></li>
@@ -477,17 +423,17 @@
 。我们将会尽快与你联系。</span>
                 <div class="contact-content">
                     <ul>
-                        <li><i class="iconfont">&#xe706;</i></span>: 400-080-2995</li>
+                        <li><i class="iconfont">&#xe706;</i></span>: 18680390649 18680357043</li>
                     </ul>
                 </div>
                 <div class="contact-content">
                     <ul>
-                        <li><i class="iconfont">&#xe65f;</i></span>: 1365799928 626770319</li>
+                        <li><i class="iconfont">&#xe65f;</i>: 1365799928 626770319</li>
                     </ul>
                 </div>
                 <div class="contact-content">
                     <ul>
-                        <li><i class="iconfont">&#xe76e;</i>: Coop@simple-prime.com </li>
+                        <li><i class="iconfont">&#xe76e;</i>: Coop@ByteIndex.com </li>
                     </ul>
                 </div>
                 <div class="contact-content">
@@ -509,19 +455,19 @@
             <div class="span6">
                 <form id="contact-form" class="span6 contact-form" action="#">
                     <p class="contact-name">
-                        <input id="contact_name" type="text" placeholder="Your Name" value="" name="name"  onfocus="this.attributes.placeholder = '';" onblur="if (this.value == '') {this.value = '';}"/>
+                        <input id="contact_name" type="text" placeholder=您的名字 value="" name="name"/>
                     </p>
                     <p class="contact-email">
-                        <input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
+                        <input id="contact_email" type="text" placeholder="您的邮箱" value="" name="email" />
                     </p>
                     <p class="contact-phone">
-                        <input id="contact-phone" type="text" placeholder="Your Phone" value="" name="phone" />
+                        <input id="contact_phone" type="text" placeholder="您的电话" value="" name="phone" />
                     </p>
                     <p class="contact-message">
-                        <textarea id="contact_message" placeholder="Your Message" name="message" rows="10" cols="40"></textarea>
+                        <textarea id="contact_message" class="contact_message" placeholder="您想了解的信息" name="message" rows="10" cols="40"></textarea>
                     </p>
                     <p class="contact-submit">
-                        <a id="contact-submit" class="submit" href="#">Send Your Email</a>
+                        <a id="contact-submit" class="submit">发送信息</a>
                     </p>
                 </form>
             </div>
@@ -539,7 +485,6 @@
                         <ul>
                             <li><a title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
                             <li><a title="Follow Me on Dribbble" target="_blank"><span class="font-icon-social-dribbble"></span></a></li>
-                            <li><a title="Follow Me on Forrst" target="_blank"><span class="font-icon-social-forrst"></span></a></li>
                             <li><a title="Follow Me on Behance" target="_blank"><span class="font-icon-social-behance"></span></a></li>
                             <li><a title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
                             <li><a title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
@@ -553,8 +498,8 @@
         </div>
     </div>
     <!-- End Socialize -->
-	<p class="credits">Copyright © 2012 • simple-prime • All rights reserved</p>
-    <p class="credits">Design By: <a href="#">Coop@simple-prime.com</a></p>
+	<p class="credits">版权所有 © 2015 • 比特实验室 • 保留所有权利</p>
+    <p class="credits">设计: <a href="#">Coop@ByteIndex.com</a></p>
 </footer>
 <!-- End Footer -->
 
@@ -563,7 +508,27 @@
 	<i class="font-icon-arrow-simple-up"></i>
 </a>
 <!-- End Back to Top -->
-
+<div class="service">
+    <div class="online">&nbsp;在线客服</div>
+    <div class="qq-content">
+        <div class="qq qq1">
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=626770319&site=qq&menu=yes" target="_blank">
+                <div>
+                    <i class="iconfont">&#xe65f;</i>
+                </div>
+                <p>QQ在线服务1</p>
+            </a>
+        </div>
+        <div class="qq qq2">
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=1365799928&site=qq&menu=yes" target="_blank">
+                <div>
+                    <i class="iconfont">&#xe65f;</i>
+                </div>
+                <p>QQ在线服务2</p>
+            </a>
+        </div>
+    </div>
+</div>
 <!-- Js -->
 <script src="_include/js/jquery.min.js"></script> <!-- jQuery Core -->
 <script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->

@@ -1,3 +1,19 @@
+function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        $(".service").css("display","none");
+    }
+}
+browserRedirect();
+
 jQuery(function($){
 
 var BRUSHED = window.BRUSHED || {};
@@ -9,16 +25,25 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
 BRUSHED.mobileNav = function(){
 	var windowWidth = $(window).width();
-	
 	if( windowWidth <= 979 ) {
 		if( $('#mobile-nav').length > 0 ) {
 			mobileMenuClone.insertAfter('#menu');
-			$('#navigation-mobile #menu-nav').attr('id', 'menu-nav-mobile');
+			$('#navigation-mobile #menu-nav').attr({'id':'menu-nav-mobile',"class":'menu-nav-mobile'});
+            $('#navigation-mobile #li1').attr('id', 'li1-mobile');
+            $('#navigation-mobile #li2').attr('id', 'li2-mobile');
+
+            $("#li1-mobile").click(function(){
+                location.href="index.html"
+            });
+            $("#li2-mobile").click(function(){
+                location.href="index-English.html"
+            });
 		}
-	} else {
+	}
+    else {
 		$('#navigation-mobile').css('display', 'none');
 		if ($('#mobile-nav').hasClass('open')) {
-			$('#mobile-nav').removeClass('open');	
+			$('#mobile-nav').removeClass('open');
 		}
 	}
 }
@@ -79,8 +104,7 @@ BRUSHED.slider = function(){
 		slides 					:  	[			// Slideshow Images
 											{image : '_include/img/slider-images/img01.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/img02.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/img03.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
-//											{image : '_include/img/slider-images/img04.jpg', title : '<div class="slide-content"><img src="./_include/img/logo.png" alt=""/></div>', thumb : '', url : ''}
+											{image : '_include/img/slider-images/img03.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   
@@ -180,38 +204,7 @@ BRUSHED.fancyBox = function(){
 			}
 		});
 	}
-}
-
-
-/* ==================================================
-   Contact Form
-================================================== */
-
-//BRUSHED.contactForm = function(){
-//	$("#contact-submit").on('click',function() {
-//		$contact_form = $('#contact-form');
-//
-//		var fields = $contact_form.serialize();
-//
-//		$.ajax({
-//			type: "POST",
-//			url: "_include/php/contact.php",
-//			data: fields,
-//			dataType: 'json',
-//			success: function(response) {
-//
-//				if(response.status){
-//					$('#contact-form input').val('');
-//					$('#contact-form textarea').val('');
-//				}
-//
-//				$('#response').empty().html(response.html);
-//			}
-//		});
-//		return false;
-//	});
-//}
-
+};
 
 /* ==================================================
    Menu Highlight
@@ -227,7 +220,7 @@ BRUSHED.menu = function(){
 		easing: 'easeOutExpo',
 		filter: ':not(.external)'
 	});
-}
+};
 
 /* ==================================================
    Next Section
@@ -405,7 +398,6 @@ $(document).ready(function(){
 	BRUSHED.goUp();
 	BRUSHED.filter();
 	BRUSHED.fancyBox();
-//	BRUSHED.contactForm();
 	BRUSHED.scrollToTop();
 	BRUSHED.utils();
 	BRUSHED.accordion();
@@ -418,3 +410,55 @@ $(window).resize(function(){
 });
 
 });
+
+/* ==================================================
+ language
+ ================================================== */
+$("#li1").click(function(){
+    location.href="index.html"
+});
+$("#li2").click(function(){
+    location.href="index-English.html"
+});
+
+/* ==================================================
+ Contact Form
+ ================================================== */
+$("#contact-submit").on('click',function() {
+    var $contact_form = $('#contact-form');
+    var fields = $contact_form.serialize();
+    var name=$("#contact_name").val();
+    var email=$("#contact_email").val();
+    var telephone=$("#contact_phone").val();
+    var message=$("#contact_message").val();
+    var regEmail=/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+    if(name.length<=0){
+        $("#contact_name").focus();
+    }
+    else if(!regEmail.test(email)){
+        $("#contact_email").focus();
+    }
+    else if(telephone.length<=0){
+        $("#contact_phone").focus();
+    }
+    else if(message.length<=0){
+        $("#contact_message").focus();
+    }
+    else{
+        $.ajax({
+            type: "post",
+            url: "",
+            data: fields,
+            dataType: 'json',
+            success: function(response) {
+                if(response.status){
+                    $('#contact-form input').val('');
+                    $('#contact-form textarea').val('');
+                }
+                $('#response').empty().html(response.html);
+            }
+        });
+    }
+    return false;
+});
+
