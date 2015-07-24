@@ -1,4 +1,12 @@
-function browserRedirect() {
+
+jQuery(function($){
+
+var ByteIndex = window.ByteIndex || {};
+
+/* ==================================================
+     judge mobile
+================================================== */
+ByteIndex.browserRedirect=function() {
     var sUserAgent = navigator.userAgent.toLowerCase();
     var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
     var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
@@ -11,19 +19,14 @@ function browserRedirect() {
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         $(".service").css("display","none");
     }
-}
-browserRedirect();
-
-jQuery(function($){
-
-var BRUSHED = window.BRUSHED || {};
+};
 
 /* ==================================================
    Mobile Navigation
 ================================================== */
 var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
-BRUSHED.mobileNav = function(){
+ByteIndex.mobileNav = function(){
 	var windowWidth = $(window).width();
 	if( windowWidth <= 979 ) {
 		if( $('#mobile-nav').length > 0 ) {
@@ -33,10 +36,10 @@ BRUSHED.mobileNav = function(){
             $('#navigation-mobile #li2').attr('id', 'li2-mobile');
 
             $("#li1-mobile").click(function(){
-                location.href="index.html"
+                location.href="/"
             });
             $("#li2-mobile").click(function(){
-                location.href="index-English.html"
+                location.href="/en"
             });
 		}
 	}
@@ -46,9 +49,9 @@ BRUSHED.mobileNav = function(){
 			$('#mobile-nav').removeClass('open');
 		}
 	}
-}
+};
 
-BRUSHED.listenerMenu = function(){
+ByteIndex.listenerMenu = function(){
 	$('#mobile-nav').on('click', function(e){
 		$(this).toggleClass('open');
 		
@@ -64,14 +67,14 @@ BRUSHED.listenerMenu = function(){
 		$('#mobile-nav').removeClass('open');
 		$('#navigation-mobile').slideUp(350, 'easeOutExpo');
 	});
-}
+};
 
 
 /* ==================================================
    Slider Options
 ================================================== */
 
-BRUSHED.slider = function(){
+ByteIndex.slider = function(){
 	$.supersized({
 		// Functionality
 		slideshow               :   1,			// Slideshow on/off
@@ -102,9 +105,9 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/img01.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/img02.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/img03.jpg', title : '<div class="slide-content"><img src="./_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''}
+											{image : '/_include/img/slider-images/img01.jpg', title : '<div class="slide-content"><img src="/_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
+											{image : '/_include/img/slider-images/img02.jpg', title : '<div class="slide-content"><img src="/_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
+											{image : '/_include/img/slider-images/img03.jpg', title : '<div class="slide-content"><img src="/_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   
@@ -113,75 +116,22 @@ BRUSHED.slider = function(){
 		
 	});
 
-}
+};
 
 
 /* ==================================================
    Navigation Fix
 ================================================== */
 
-BRUSHED.nav = function(){
+ByteIndex.nav = function(){
 	$('.sticky-nav').waypoint('sticky');
 };
-
-
-/* ==================================================
-   Filter Works
-================================================== */
-
-BRUSHED.filter = function (){
-	if($('#projects').length > 0){		
-		var $container = $('#projects');
-
-		$container.imagesLoaded(function() {
-			$container.isotope({
-			  // options
-			  animationEngine: 'best-available',
-			  itemSelector : '.item-thumbs',
-			  layoutMode : 'fitRows'
-			});
-		});
-
-		
-		// filter items when filter link is clicked
-		var $optionSets = $('#options .option-set'),
-			$optionLinks = $optionSets.find('a');
-	
-		  $optionLinks.click(function(){
-			var $this = $(this);
-			// don't proceed if already selected
-			if ( $this.hasClass('selected') ) {
-			  return false;
-			}
-			var $optionSet = $this.parents('.option-set');
-			$optionSet.find('.selected').removeClass('selected');
-			$this.addClass('selected');
-	  
-			// make option object dynamically, i.e. { filter: '.my-filter-class' }
-			var options = {},
-				key = $optionSet.attr('data-option-key'),
-				value = $this.attr('data-option-value');
-			// parse 'false' as false boolean
-			value = value === 'false' ? false : value;
-			options[ key ] = value;
-			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-			  // changes in layout modes need extra logic
-			  changeLayoutMode( $this, options )
-			} else {
-			  // otherwise, apply new options
-			  $container.isotope( options );
-			}
-			
-			return false;
-		});
-	}
-}
 
 /* ==================================================
    Menu Highlight
 ================================================== */
 
-BRUSHED.menu = function(){
+ByteIndex.menu = function(){
 	$('#menu-nav, #menu-nav-mobile').onePageNav({
 		currentClass: 'current',
     	changeHash: false,
@@ -197,34 +147,32 @@ BRUSHED.menu = function(){
    Next Section
 ================================================== */
 
-BRUSHED.goSection = function(){
+ByteIndex.goSection = function(){
 	$('#nextsection').on('click', function(){
-		$target = $($(this).attr('href')).offset().top-30;
-		
+		var $target = $($(this).attr('href')).offset().top-30;
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
-}
+};
 
 /* ==================================================
    GoUp
 ================================================== */
 
-BRUSHED.goUp = function(){
+ByteIndex.goUp = function(){
 	$('#goUp').on('click', function(){
-		$target = $($(this).attr('href')).offset().top-30;
-
+        var $target = $($(this).attr('href')).offset().top-30;
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
-}
+};
 
 
 /* ==================================================
 	Scroll to Top
 ================================================== */
 
-BRUSHED.scrollToTop = function(){
+ByteIndex.scrollToTop = function(){
 	var windowWidth = $(window).width(),
 		didScroll = false;
 
@@ -250,13 +198,13 @@ BRUSHED.scrollToTop = function(){
 			}
 		}
 	}, 250);
-}
+};
 
 /* ==================================================
    Thumbs / Social Effects
 ================================================== */
 
-BRUSHED.utils = function(){
+ByteIndex.utils = function(){
 
 	$('.item-thumbs').bind('touchstart', function(){
 		$(".active").removeClass("active");
@@ -273,13 +221,13 @@ BRUSHED.utils = function(){
       	$(this).addClass('active');
     });
 
-}
+};
 
 /* ==================================================
    Accordion
 ================================================== */
 
-BRUSHED.accordion = function(){
+ByteIndex.accordion = function(){
 	var accordion_trigger = $('.accordion-heading.accordionize');
 
 	accordion_trigger.delegate('.accordion-toggle','click', function(event){
@@ -295,13 +243,13 @@ BRUSHED.accordion = function(){
 	 	}
 		event.preventDefault();
 	});
-}
+};
 
 /* ==================================================
    Toggle
 ================================================== */
 
-BRUSHED.toggle = function(){
+ByteIndex.toggle = function(){
 	var accordion_trigger_toggle = $('.accordion-heading.togglize');
 	
 	accordion_trigger_toggle.delegate('.accordion-toggle','click', function(event){
@@ -321,16 +269,76 @@ BRUSHED.toggle = function(){
    Tooltip
 ================================================== */
 
-BRUSHED.toolTip = function(){ 
+ByteIndex.toolTip = function(){ 
     $('a[data-toggle=tooltip]').tooltip();
 };
 
+/* ==================================================
+     language
+================================================== */
 
+ByteIndex.language = function(){
+    $("#li1").click(function(){
+        location.href="/"
+    });
+    $("#li2").click(function(){
+        location.href="/en/"
+    });
+};
+
+/* ==================================================
+ Contact Form
+ ================================================== */
+ByteIndex.form=function(){
+    $("#contact-submit").on('click',function() {
+        var $contact_form = $('#contact-form');
+        var fields = $contact_form.serialize();
+        var name=$("#contact_name");
+        var email=$("#contact_email");
+        var telephone=$("#contact_phone");
+        var message=$("#contact_message");
+        var regEmail=/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+        if(name.val().length<=0){
+            name.focus();
+        }else if(!regEmail.test(email.val())){
+            email.focus();
+        }else if(telephone.val().length<=0){
+            telephone.focus();
+        }else if(message.val().length<=0){
+            message.focus();
+        }else{
+            var mes=judgePage();
+            $.ajax({
+                type: "post",
+                url: "",
+                data: fields,
+                dataType: 'json',
+                beforeSend: function myfunction() {
+                    modalLoading(mes.beforeAjaxMsg);
+                },
+                error:function () {
+                    bootbox.hideAll();
+                    finAlert(mes.errorMsg, false);
+                },
+                success: function(data) {
+                    if(data){
+                        bootbox.hideAll();
+                        $('#contact-form input').val('');
+                        $('#contact-form textarea').val('');
+                    }else{
+                        finAlert(data.Msg, false);
+                    }
+                }
+            });
+        }
+        return false;
+    });
+};
 /* ==================================================
 	Init
 ================================================== */
 
-BRUSHED.slider();
+ByteIndex.slider();
 
 $(document).ready(function(){
 	// Preload the page with jPreLoader
@@ -343,92 +351,33 @@ $(document).ready(function(){
 			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
 		}
 	});
-
-	BRUSHED.nav();
-	BRUSHED.mobileNav();
-	BRUSHED.listenerMenu();
-	BRUSHED.menu();
-	BRUSHED.goSection();
-	BRUSHED.goUp();
-	BRUSHED.filter();
-	BRUSHED.scrollToTop();
-	BRUSHED.utils();
-	BRUSHED.accordion();
-	BRUSHED.toggle();
-	BRUSHED.toolTip();
+    ByteIndex.browserRedirect();
+	ByteIndex.nav();
+	ByteIndex.mobileNav();
+	ByteIndex.listenerMenu();
+	ByteIndex.menu();
+	ByteIndex.goSection();
+	ByteIndex.goUp();
+	ByteIndex.scrollToTop();
+	ByteIndex.utils();
+	ByteIndex.accordion();
+	ByteIndex.toggle();
+	ByteIndex.toolTip();
+    ByteIndex.language();
+    ByteIndex.form();
 });
 
 $(window).resize(function(){
-	BRUSHED.mobileNav();
+	ByteIndex.mobileNav();
 });
 
 });
 
-/* ==================================================
- language
- ================================================== */
-$("#li1").click(function(){
-    location.href="index.html"
-});
-$("#li2").click(function(){
-    location.href="index-English.html"
-});
-/* ==================================================
- Contact Form
- ================================================== */
-$("#contact-submit").on('click',function() {
-    var $contact_form = $('#contact-form');
-    var fields = $contact_form.serialize();
-    var name=$("#contact_name").val();
-    var email=$("#contact_email").val();
-    var telephone=$("#contact_phone").val();
-    var message=$("#contact_message").val();
-    var regEmail=/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
-    if(name.length<=0){
-        $("#contact_name").focus();
-    }
-    else if(!regEmail.test(email)){
-        $("#contact_email").focus();
-    }
-    else if(telephone.length<=0){
-        $("#contact_phone").focus();
-    }
-    else if(message.length<=0){
-        $("#contact_message").focus();
-    }
-    else{
-        var mes=judgePage();
-        $.ajax({
-            type: "post",
-            url: "",
-            data: fields,
-            dataType: 'json',
-            beforeSend: function myfunction() {
-                modalLoading(mes.beforeAjaxMsg);
-            },
-            error:function () {
-                bootbox.hideAll();
-                finAlert(mes.errorMsg, false);
-            },
-            success: function(data) {
-                if(data){
-                    bootbox.hideAll();
-                    $('#contact-form input').val('');
-                    $('#contact-form textarea').val('');
-                }else{
-                    finAlert(data.Msg, false);
-                }
-            }
-        });
-    }
-    return false;
-});
 function judgePage(){
     var url = window.location.href.split("/");
-    var len=parseInt(url.length);
-    var page= url[len-1];
     var mes;
-    if(page=="index.html"){
+    var flag=parseInt(url.indexOf("en"));
+    if(flag<0){
         mes=({
             beforeAjaxMsg:"正在提交数据，请稍候....",
             errorMsg:"提交数据过程中出现错误，请检查数据后重试提交。"
@@ -447,7 +396,7 @@ function modalLoading(msg) {
     }
     bootbox.dialog({
         title: $(document).attr('title'),
-        message: '<img src="_include/img/ajax-loader2.gif" />' + msg,
+        message: '<img src="/_include/img/ajax-loader2.gif" />' + msg,
         animate: false,
         buttons: {}
     });

@@ -1,13 +1,6 @@
 /*
-Theme Name: Brushed 
-Theme URI: http://www.themes.alessioatzeni.com/html/brushed/
-Author: Alessio Atzeni
-Author URI: http://www.alessioatzeni.com
-Description: Personal Website and Portfolio of Alessio Atzeni
-Version: 1.0
+Theme Name: byteIndex Version: 1.0
 */
-
-
 /* ==================================================
    Basic Styles
 ================================================== */
@@ -34,18 +27,15 @@ body{
 	font-size:16px;
 	line-height:28px;
 }
-
 a{
 	color:#DE5E60;
 	text-decoration: none;
 	cursor: pointer;
-
 	-webkit-transition: color 0.1s linear 0s;
 	   -moz-transition: color 0.1s linear 0s;
 		 -o-transition: color 0.1s linear 0s;
 		    transition: color 0.1s linear 0s;
 }
-
 a:hover,
 a:active,
 a:focus{
@@ -126,17 +116,16 @@ input[type="text"]:focus {
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #7F8289;
+    color: #717171 !important;
 }
-
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #7F8289;
+    color: #717171 !important;
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #7F8289;
+    color: #717171 !important;
 }
 
 /* ==================================================
@@ -1116,7 +1105,7 @@ footer {
 footer .credits {
 
 	color: #9e98a8;
-	font-size: 18px;
+	font-size: 16px;
 	margin-bottom: 0;
 	padding: 5px 0;
 }
@@ -1159,7 +1148,6 @@ footer .credits {
 #back-to-top i {
 	margin-left: -7px;	
 }
-
 
 /* ==================================================
    Preloader
@@ -1525,18 +1513,7 @@ footer .credits {
 .superiority .social span{
     color: #ffffff;
 }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: #4d4d4d;
-    font-size: 14px;
-}
-input::-moz-placeholder, textarea::-moz-placeholder {
-    color: #4d4d4d;
-    font-size: 14px;
-}
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    color: #4d4d4d;
-    font-size: 14px;
-}
+
 .language{
     position: relative;
 }

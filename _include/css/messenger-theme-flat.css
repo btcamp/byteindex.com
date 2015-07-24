@@ -454,7 +454,7 @@ ul.messenger-theme-flat .messenger-spinner {
   position: absolute;
   left: 7px;
   top: 50%;
-  margin-top: -18px;
+  /*margin-top: -18px;*/
   z-index: 999;
   height: 32px;
   width: 32px;
