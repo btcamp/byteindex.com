@@ -426,4 +426,3 @@ function finAlert(message, issuccess, config) {
     }
 }
 
-

@@ -69,7 +69,7 @@
                 <li><a href="#liquidity">Spread</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li id="turn" class="language">
-                    <a href>Language</a>
+                    <p>Language</p>
                     <ul>
                         <li class="li1" id="li1"><a href>简体中文</a></li>
                         <li class="li2" id="li2"><a href>English</a></li>
@@ -117,11 +117,13 @@
         <!-- product -->
         <div class="row superiority">
             <!-- Start Profile -->
-            <div class="span2 profile">
+            <div class="span2 design">
                 <div class="image-wrap">
                     <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
+                        <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The City" href="/_include/img/advantages/01.jpg">
+                            <span class="overlay-img"></span>
+                            <span class="overlay-img-thumb font-icon-plus"></span>
+                        </a>
                     </div>
                     <img src="/_include/img/advantages/01.jpg" alt="">
                 </div>
@@ -396,16 +398,16 @@
             <div class="span6">
                 <form id="contact-form" class="span6 contact-form" action="#">
                     <p class="contact-name">
-                        <input id="contact_name" type="text" placeholder="Your Name" value="" name="name"  onfocus="this.attributes.placeholder = '';" onblur="if (this.value == '') {this.value = '';}"/>
+                        <input id="contact_name" type="text" placeholder="Your Name" value="" name="name"  onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','Your Name')"/>
                     </p>
                     <p class="contact-email">
-                        <input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
+                        <input id="contact_email" type="text" placeholder="Email Address" value="" name="email"  onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','Your Email')"/>
                     </p>
                     <p class="contact-phone">
-                        <input id="contact_phone" type="text" placeholder="Your Phone" value="" name="phone" />
+                        <input id="contact_phone" type="text" placeholder="Your Phone" value="" name="phone"  onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','Your Phone')"/>
                     </p>
                     <p class="contact-message">
-                        <textarea id="contact_message" placeholder="Your Message" name="message" rows="11" cols="40"></textarea>
+                        <textarea id="contact_message" placeholder="Your Message" name="message" rows="11" cols="40"  onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','Your Message')"></textarea>
                     </p>
                     <p class="contact-submit">
                         <a id="contact-submit" class="submit">Send Your Email</a>
@@ -451,7 +453,7 @@
 </a>
 <!-- End Back to Top -->
 <div class="service">
-    <div class="online">O n l i n e</div>
+    <div class="online">O N L I N E</div>
     <div class="qq-content">
         <div class="qq qq1">
             <a href="http://wpa.qq.com/msgrd?v=3&uin=626770319&site=qq&menu=yes" target="_blank">

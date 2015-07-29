@@ -385,16 +385,16 @@
             <div class="span6">
                 <form id="contact-form" class="span6 contact-form" action="#">
                     <p class="contact-name">
-                        <input id="contact_name"  class="input" type="text" placeholder=您的名字 value="" name="name"/>
+                        <input id="contact_name"  class="input" type="text" placeholder=您的名字 value="" name="name" onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','您的名字')"/>
                     </p>
                     <p class="contact-email">
-                        <input id="contact_email" class="input" type="text" placeholder="您的邮箱" value="" name="email" />
+                        <input id="contact_email" class="input" type="text" placeholder="您的邮箱" value="" name="email" onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','您的邮箱')"/>
                     </p>
                     <p class="contact-phone">
-                        <input id="contact_phone" class="input" type="text" placeholder="您的电话" value="" name="phone" />
+                        <input id="contact_phone" class="input" type="text" placeholder="您的电话" value="" name="phone" onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','您的电话')"/>
                     </p>
                     <p class="contact-message">
-                        <textarea id="contact_message" class="contact_message input" placeholder="您想了解的信息" name="message" rows="10" cols="40"></textarea>
+                        <textarea id="contact_message" class="contact_message input" placeholder="您想了解的信息" name="message" rows="10" cols="40" onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','您想了解的信息')"></textarea>
                     </p>
                     <p class="contact-submit">
                         <a id="contact-submit" class="submit">发送信息</a>
