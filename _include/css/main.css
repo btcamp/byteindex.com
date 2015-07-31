@@ -4,9 +4,6 @@ Theme Name: byteIndex Version: 1.0
 /* ==================================================
    Basic Styles
 ================================================== */
-*{
-    font-family: "黑体",Arial,Calibri, Sans-Serif;
-}
 html, body {
 	height: 100%;
 }
@@ -616,14 +613,14 @@ nav#menu #menu-nav li a:hover {
 
 .page {
 	background: #2F3238;
-	padding: 50px 0;
+	padding: 50px 0 30px 0;
 	position: relative;
 	z-index: 99;
 }
 
 .page-alternate {
 	background: #26292E;
-	padding: 50px 0;
+    padding: 50px 0 30px 0;
 	position: relative;
 	z-index: 99;
 }
@@ -768,16 +765,29 @@ nav#menu #menu-nav li a:hover {
 	margin-bottom: 25px;
 	cursor: pointer;
 }
-
+.spread:hover{
+    z-index: 2;
+    -webkit-transition: all 1500ms ease-out 0s;
+    -moz-transition: all 1500ms ease-out 0s;
+    -ms-transition: all 1500ms ease-out 0s;
+    -o-transition: all 1500ms ease-out 0s;
+    transition: all 1500ms ease-out 0s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform:  scale(1.1);
+    transform:  scale(1.1);
+}
 .project .image-wrap{
     cursor:default;
     border-radius: 25px;
 }
 
 .image-wrap img {
-	width: 100%;
+	width: 99%;
+    text-align: center;
+    margin-left: 0.5%;
 }
-
 .image-wrap  .hover-wrap {
 	position: absolute;
 	display: block;
@@ -912,7 +922,6 @@ nav#menu #menu-nav li a:hover {
     height: auto;
     padding: 15px;
 	margin: 0;
-	font-family: "黑体",Arial,Calibri,sans-serif;
     resize: none;
 }
 
@@ -1347,33 +1356,6 @@ footer .credits {
           transition: none;
 }
 /*cooperation Section*/
-.coo-content h4{
-    font-size: 22px;
-}
-.coo-content ul li{
-    line-height: 26px;
-}
-.coo-content img{
-    width: 100%;
-}
-.coo-content div h5{
-    color: #C8575A;
-}
-#benefit img{
-    width: 100%;
-}
-#abstract-content li{
-    list-style-type: square;
-    padding: 5px 0;
-    line-height: 25px;
-}
-#provideService-content dt{
-    padding-bottom: 20px;
-}
-#provideService-content dd{
-    padding: 5px 0;
-    margin: 0;
-}
 .download a p{
     font-size: 15px;
     padding-top: 10px;
@@ -1419,25 +1401,18 @@ footer .credits {
 .development-tittle h4{
     padding-left: 5px;
     text-align: center;
-    font-size: 2.0em;
+    font-size: 1.8em;
     color:  #ffffff;
     margin-bottom: 50px;
+    font-weight: 400 !important;
 }
 .site__title {
     background-image: -webkit-linear-gradient(92deg, #6a63cd,#FFF);
-    background-image: -moz-linear-gradient(92deg, #6a63cd,#FFF);
-    background-image: -o-linear-gradient(92deg, #6a63cd,#FFF);
     -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -o-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -o-text-fill-color: transparent;
     text-fill-color: transparent;
     -webkit-animation: hue 4s infinite linear;
-    -moz-animation: hue 4s infinite linear;
-    -o-animation: hue 4s infinite linear;
     animation: hue 4s infinite linear;
 }
 @-webkit-keyframes hue {
@@ -1499,9 +1474,6 @@ footer .credits {
 }
 .add-img{
     margin-top: 30px;
-}
-.superiority{
-
 }
 .superiority .profile{
     margin-top: 10px;
@@ -1578,7 +1550,6 @@ footer .credits {
 
 .technology{
     margin-top:-60px;
-    padding-bottom: 30px;
     padding-top: 50px;
 }
 .service{
@@ -1587,7 +1558,7 @@ footer .credits {
     margin-top: -90px;
     z-index: 1000;
     height: 175px;
-    right:-90px ;
+    right:-68px ;
 }
 .service:hover{
     right:0;
@@ -1599,23 +1570,30 @@ footer .credits {
 .service .online{
     color: white;
     background: #575757;
-    opacity: .8;
+    opacity: .7;
     float: left;
-    width: 1em;
-    padding:5px 14px;
+    width: 30px;
     font-size: 1.0em;
-    height: 167px;
-    word-wrap: break-word;
+    height: 147px;
+    height: 145px\9\0;
+    *height: 147px;
+    +height: 147px;
+    _height: 147px;
+    border-radius: 20px 0 0 20px;
+    padding: 0 5px \9\0;
+    *padding: 0 5px;
+    +padding: 0 5px;
+    _padding: 0 5px;
 }
 .service .qq-content{
     float: left;
 }
 .service .qq{
     vertical-align: middle;
-    padding:20px 5px 0 5px;
+    padding:10px 0 0 0;
     opacity: .8;
     background: #15abcd;
-    width: 80px;
+    width: 68px;
 }
 .service .qq2{
     margin-top: -29px;
@@ -1627,14 +1605,41 @@ footer .credits {
 }
 .service a p{
     padding: 0;
-    margin-top: 5px;
-    font-size: 0.9em;
+    margin-top: 3px;
+    font-size: 0.8em;
 }
 .service a i{
-    font-size: 40px;
+    font-size: 30px;
     color: white;
 }
 .modal-body{
     height: 60px;
     line-height: 60px;
+}
+
+.mouseOver{
+    z-index: 2;
+    -webkit-transition: all 1500ms ease-out 0s;
+    -moz-transition: all 1500ms ease-out 0s;
+    -ms-transition: all 1500ms ease-out 0s;
+    -o-transition: all 1500ms ease-out 0s;
+    transition: all 1500ms ease-out 0s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform:  scale(1.1);
+    transform:  scale(1.1);
+}
+.mouseOut{
+    z-index: 1;
+    -webkit-transition: all 500ms ease-out 0s;
+    -moz-transition: all 500ms ease-out 0s;
+    -ms-transition: all 500ms ease-out 0s;
+    -o-transition: all 500ms ease-out 0s;
+    transition: all 500ms ease-out 0s;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -o-transform:  scale(1.0);
+    transform:  scale(1.0);
 }

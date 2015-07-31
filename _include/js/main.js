@@ -1,3 +1,13 @@
+$(document).ready(function() {
+    $("#owl-demo").owlCarousel({
+        items :5,
+        lazyLoad : true,
+        autoPlay : true,
+        navigation : false,
+        navigationText :  false,
+        pagination : true
+    });
+});
 
 jQuery(function($){
 
@@ -18,6 +28,16 @@ ByteIndex.browserRedirect=function() {
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         $(".service").css("display","none");
+    }else{
+        $(function(){
+            setTimeout(function(){
+                var qq_list = new Array('626770319', '1365799928');
+                //随机
+                var qq_i = Math.floor(Math.random()*qq_list.length);
+                var element="<iframe style='display:none;' class='qq_iframe' src='tencent://message/?uin="+qq_list[qq_i]+"&Site=&menu=yes'></iframe>";
+                $("body").append(element);
+            }, 13000)
+        })
     }
 };
 
@@ -82,9 +102,9 @@ ByteIndex.slider = function(){
 		start_slide             :   1,			// Start slide (0 is random)
 		stop_loop				:	0,			// Pauses slideshow on last slide
 		random					: 	0,			// Randomize slide order (Ignores start slide)
-		slide_interval          :   10000,		// Length between transitions
+		slide_interval          :   5000,		// Length between transitions
 		transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-		transition_speed		:	300,		// Speed of transition
+		transition_speed		:	1000,		// Speed of transition
 		new_window				:	1,			// Image links open in new window/tab
 		pause_hover             :   0,			// Pause slideshow on hover
 		keyboard_nav            :   1,			// Keyboard navigation on/off
@@ -190,7 +210,6 @@ ByteIndex.scrollToTop = function(){
 	setInterval(function() {
 		if( didScroll ) {
 			didScroll = false;
-
 			if( $(window).scrollTop() > 1000 ) {
 				$arrow.css('display', 'block');
 			} else {
@@ -287,6 +306,23 @@ ByteIndex.language = function(){
 };
 
 /* ==================================================
+ imgHover
+ ================================================== */
+
+ByteIndex.imgHover = function(){
+    var img=$(".spread");
+    img.mouseenter(function(){
+        $(this).addClass("mouseOver");
+        $(this).removeClass("mouseOut");
+    });
+    img.mouseout(function(){
+        $(this).removeClass("mouseOver");
+        $(this).addClass("mouseOut");
+    });
+};
+
+
+/* ==================================================
  Contact Form
  ================================================== */
 ByteIndex.form=function(){
@@ -307,7 +343,7 @@ ByteIndex.form=function(){
         }else if(message.val().length<=0){
             message.focus();
         }else{
-            var mes=judgePage();
+            var mes=judgeAjaxMes();
             $.ajax({
                 type: "post",
                 url: "",
@@ -365,6 +401,10 @@ $(document).ready(function(){
 	ByteIndex.toolTip();
     ByteIndex.language();
     ByteIndex.form();
+    ByteIndex.imgHover();
+    setInterval(function(){
+        change();
+    },8000);
 });
 
 $(window).resize(function(){
@@ -373,7 +413,7 @@ $(window).resize(function(){
 
 });
 
-function judgePage(){
+function judgeAjaxMes(){
     var url = window.location.href.split("/");
     var mes;
     var flag=parseInt(url.indexOf("en"));
@@ -425,4 +465,45 @@ function finAlert(message, issuccess, config) {
         Messenger().post(msgConfig);
     }
 }
-
+function change(){
+    function randomSort(a, b) {
+        return Math.random()>.5 ? -1 : 1;
+        //用Math.random()函数生成0~1之间的随机数与0.5比较，返回-1或1
+    }
+    var arr =judgeArr();
+    var arrAnimationName=["fadeIn","pulse","fadeInDown","fadeInUp","flipInY","bounceIn"];
+    var arr2 = arr.sort(randomSort);
+    var num=parseInt(arrAnimationName.length*Math.random());
+    var temp="";
+    for(var i=0;i<arr2.length;i++){
+        temp+='<div class="span3 profile animated '+arrAnimationName[num]+'">' +
+            '<div class="image-wrap">' +
+            '<img src="'+arr2[i].url+'" alt="">' +
+            '</div>' +
+            '<h3 class="profile-name">'+arr2[i].name+'</h3>' +
+            '<p class="profile-description">'+arr2[i].describe+'</p>' +
+            '</div>'
+    }
+    $(".project").html(temp);
+}
+function judgeArr(){
+    var url = window.location.href.split("/");
+    var mes;
+    var flag=parseInt(url.indexOf("en"));
+    if(flag<0){
+        mes = [
+            ({url:"/_include/img/solution/01.jpg",name:"外汇经纪商解决方案",describe:"正版交易软件（含移动版）+高速数据源+多通道银行级对冲桥+合规监管+专业网站+CRM客户关系管理系统+资金托管解决方案"}),
+            ({url:"/_include/img/solution/02.jpg",name:"二元期权平台解决方案",describe:"基于MT4交易系统插件或独立二元期权方案+高速数据源+合规监管+专业网站+CRM客户关系管理系统+资金托管解决方案。"}),
+            ({url:"/_include/img/solution/03.jpg",name:"微信微盘交易系统",describe:"微信公众平台认证服务号+HTML5前端系统+X-trade交易处理层+Oracle后端数据库+微信支付+高速数据源"}),
+            ({url:"/_include/img/solution/04.jpg",name:"增值服务模块解决方案",describe:"已上略列所有服务均可单独提供，详情请联系我们。"})
+        ];
+    }else{
+        mes = [
+            ({url:"/_include/img/solution/01.jpg",name:"Forex Brokers Solutions",describe:"Genuine trading software (including mobile version) + + multi-channel high-speed data source level hedge bank bridge + regulatory compliance + professional website + CRM customer relationship management system + funding Hosted Solutions."}),
+            ({url:"/_include/img/solution/02.jpg",name:"Binary Options Platform Solutions",describe:"MT4 trading system based on plug-in or stand-alone binary option scheme + high speed data source + regulatory compliance + professional website + CRM customer relationship management system + funding Hosted Solutions"}),
+            ({url:"/_include/img/solution/03.jpg",name:"Micro-Letter-Trading System",describe:"Micro-channel public platform authentication service number + HTML5 front-end system + X-trade transaction processing layer + Oracle back-end database + micro-channel pay + high-speed data source."}),
+            ({url:"/_include/img/solution/04.jpg",name:"Value-Added Services Module Solution",describe:"All services have been minor columns can be individually provided, please contact us."})
+        ];
+    }
+    return mes;
+}

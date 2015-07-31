@@ -20,16 +20,33 @@
     <link href="/_include/css/bootstrap.min.css" rel="stylesheet">
     <!-- Main Style -->
     <link href="/_include/css/main.css" rel="stylesheet">
+    <link href="/_include/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/_include/css/owl.carousel.css" rel="stylesheet">
     <!-- Supersized -->
     <link href="/_include/css/supersized.css" rel="stylesheet">
     <link href="/_include/css/supersized.shutter.css" rel="stylesheet">
     <!-- Font Icons -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
     <link href="/_include/css/fonts.css" rel="stylesheet">
     <!-- Responsive -->
     <link href="/_include/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="/_include/css/responsive.css" rel="stylesheet">
     <link href="/_include/css/messenger.css" rel="stylesheet">
     <link href="/_include/css/messenger-theme-flat.css" rel="stylesheet">
+    <link href="/_include/css/animate.min.css" rel="stylesheet">
+
+    <style>
+        *{
+            font-family:"黑体",'Source Sans Pro', sans-serif;
+            font-weight: 500;
+        }
+        #contact-form input,
+        #contact-form textarea{
+            font-family:"黑体",'Source Sans Pro', sans-serif;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <script>
     var _hmt = _hmt || [];
@@ -102,158 +119,259 @@
                 </div>
             </div>
         </div>
+        <div class="row superiority">
+            <div id="owl-demo" class="owl-carousel">
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/01.jpg" />
+                                <p>一站式经纪商解决方案</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/02.jpg" />
+                                <p>多通道银行对冲订单瞬间完成</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/03.jpg" />
+                                <p>多达187种可交易资产</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/04.jpg" />
+                                <p>每秒30次的报价刷新频率</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/05.jpg" />
+                                <p>对接交易系统后台的CRM管理系统</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/06.jpg" />
+                                <p>提供移动网页版、微信版交易平台</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/07.jpg" />
+                                <p>提供MT4、FIX-API、HOTSPOT、EBS交易系统</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/08.jpg" />
+                                <p>提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/09.jpg" />
+                                <p>提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/10.jpg" />
+                                <p>提供制作专业双语网站服务、专业人员岗前培训和日常业务培训</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/11.jpg" />
+                                <p>提供国际5A级机房托管高性能服务器</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-grid">
+                            <div class="item-pic">
+                                <img src="/_include/img/advantages/12.jpg" />
+                                <p>专业在线客服系统</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
         <!-- End Title Page -->
         <!-- product -->
-        <div class="row superiority">
-            <!-- Start Profile -->
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/01.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>一站式经纪商解决方案</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/02.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>多通道银行对冲订单瞬间完成</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/03.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>多达187种可交易资产</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/04.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>每秒30次的报价刷新频率</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/05.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>对接交易系统后台的CRM管理系统</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/06.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>提供移动网页版、微信版交易平台</span>
-                </div>
-            </div>
+        <!--<div class="row superiority">-->
+            <!--&lt;!&ndash; Start Profile &ndash;&gt;-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/01.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>一站式经纪商解决方案</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/02.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>多通道银行对冲订单瞬间完成</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/03.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>多达187种可交易资产</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/04.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>每秒30次的报价刷新频率</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/05.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>对接交易系统后台的CRM管理系统</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/06.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>提供移动网页版、微信版交易平台</span>-->
+                <!--</div>-->
+            <!--</div>-->
 
-        </div>
-        <div class="row superiority">
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/07.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>提供MT4、FIX-API、HOTSPOT、EBS交易系统</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/08.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/09.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/10.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>提供制作专业双语网站服务、专业人员岗前培训和日常业务培训</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/11.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>提供国际5A级机房托管高性能服务器</span>
-                </div>
-            </div>
-            <div class="span2 profile">
-                <div class="image-wrap">
-                    <div class="hover-wrap">
-                        <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"></span>
-                    </div>
-                    <img src="/_include/img/advantages/12.jpg" alt="">
-                </div>
-                <div class="social">
-                    <span>专业在线客服系统</span>
-                </div>
-            </div>
-        </div>
+        <!--</div>-->
+        <!--<div class="row superiority">-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/07.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>提供MT4、FIX-API、HOTSPOT、EBS交易系统</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/08.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/09.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>提供英国FCA、新西兰FSP、澳大利亚ASIC监管办理通道</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/10.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>提供制作专业双语网站服务、专业人员岗前培训和日常业务培训</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/11.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>提供国际5A级机房托管高性能服务器</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="span2 profile">-->
+                <!--<div class="image-wrap">-->
+                    <!--<div class="hover-wrap">-->
+                        <!--<span class="overlay-img"></span>-->
+                        <!--<span class="overlay-text-thumb"></span>-->
+                    <!--</div>-->
+                    <!--<img src="/_include/img/advantages/12.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="social">-->
+                    <!--<span>专业在线客服系统</span>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 </div>
 <!-- End superiority Section -->
@@ -315,16 +433,15 @@
         </div>
         <!-- End Title Page -->
         <!-- product -->
-
         <div class="development-tittle row">
             <h4 class="span12 site__title">专业的技术为您量身定制专属的点差方案</h4>
         </div>
         <div class="row">
             <!-- Start Profile -->
-            <div class="span6 image-wrap">
+            <div class="span6 image-wrap spread">
                 <img src="/_include/img/spread/spread.jpg" alt=""/>
             </div>
-            <div class="span6 image-wrap">
+            <div class="span6 image-wrap spread">
                 <img src="/_include/img/spread/spread2.jpg" alt=""/>
             </div>
         </div>
@@ -353,31 +470,31 @@
 。我们将会尽快与你联系。</span>
                 <div class="contact-content">
                     <ul>
-                        <li><i class="iconfont">&#xe706;</i></span>: 18680390649 18680357043</li>
+                        <li><i class="iconfont">&#xe706;</i></span> : 18680390649 18680357043</li>
                     </ul>
                 </div>
                 <div class="contact-content">
                     <ul>
-                        <li><i class="iconfont">&#xe65f;</i>: 1365799928 626770319</li>
+                        <li><i class="iconfont">&#xe65f;</i> : 1365799928 626770319</li>
                     </ul>
                 </div>
                 <div class="contact-content">
                     <ul>
-                        <li><i class="iconfont">&#xe76e;</i>: Coop@ByteIndex.com </li>
+                        <li><i class="iconfont">&#xe76e;</i> : Coop@ByteIndex.com </li>
                     </ul>
                 </div>
                 <div class="contact-content">
                     <h4>香港公司:</h4>
                     <ul>
-                        <li><i class="iconfont">&#xe64e;</i>：City Investment  Limited</li>
-                        <li><i class="iconfont">&#xe631;</i>：71 Des Voeux Road Central, Hong Kong</li>
+                        <li><i class="iconfont">&#xe64e;</i> ：City Investment  Limited</li>
+                        <li><i class="iconfont">&#xe631;</i> ：71 Des Voeux Road Central, Hong Kong</li>
                     </ul>
                 </div>
                 <div class="contact-content">
                     <h4>新西兰公司:</h4>
                     <ul>
-                        <li><i class="iconfont">&#xe64e;</i>：Simple Trading Corporation Limited</li>
-                        <li><i class="iconfont">&#xe631;</i>：20/22 Munroe St, Napier, NewZealand</li>
+                        <li><i class="iconfont">&#xe64e;</i> ：Simple Trading Corporation Limited</li>
+                        <li><i class="iconfont">&#xe631;</i> ：20/22 Munroe St, Napier, NewZealand</li>
                     </ul>
                 </div>
             </div>
@@ -405,6 +522,7 @@
         </div>
     </div>
 </div>
+<!-- footer -->
 <footer>
     <!-- Socialize -->
     <div id="social-area">
@@ -432,21 +550,22 @@
     <p class="credits">设计: <a href="#">Coop@ByteIndex.com</a></p>
 </footer>
 <!-- End Footer -->
-
 <!-- Back To Top -->
 <a id="back-to-top" href="#home">
 	<i class="font-icon-arrow-simple-up"></i>
 </a>
 <!-- End Back to Top -->
 <div class="service">
-    <div class="online">&nbsp;在线客服</div>
+    <div class="online">
+        <img src="/_include/img/service_zh.png" alt="">
+    </div>
     <div class="qq-content">
         <div class="qq qq1">
             <a href="http://wpa.qq.com/msgrd?v=3&uin=626770319&site=qq&menu=yes" target="_blank">
                 <div>
                     <i class="iconfont">&#xe65f;</i>
                 </div>
-                <p>QQ在线服务1</p>
+                <p>QQ服务1</p>
             </a>
         </div>
         <div class="qq qq2">
@@ -454,7 +573,7 @@
                 <div>
                     <i class="iconfont">&#xe65f;</i>
                 </div>
-                <p>QQ在线服务2</p>
+                <p>QQ服务2</p>
             </a>
         </div>
     </div>
@@ -468,6 +587,9 @@
 <script src="/_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script src="/_include/js/messenger.min.js"></script>
 <script src="/_include/js/bootbox.min.js"></script>
+<script src="/_include/js/owl.carousel.js"></script>
+<script src="/_include/js/jquery.mixitup.min.js"></script>
+<script src="/_include/js/jquery.magnific-popup.js" type="text/javascript"></script>
 <script src="/_include/js/main.js"></script> <!-- Default JS -->
 <!-- End Js -->
 </body>
