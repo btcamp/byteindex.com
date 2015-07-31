@@ -36,7 +36,7 @@ ByteIndex.browserRedirect=function() {
                 var qq_i = Math.floor(Math.random()*qq_list.length);
                 var element="<iframe style='display:none;' class='qq_iframe' src='tencent://message/?uin="+qq_list[qq_i]+"&Site=&menu=yes'></iframe>";
                 $("body").append(element);
-            }, 13000)
+            }, 10000)
         })
     }
 };
