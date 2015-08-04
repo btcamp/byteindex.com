@@ -29,9 +29,9 @@ ByteIndex.browserRedirect=function(qq) {
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         $(".service").css("display","none");
     }else{
-//        setTimeout(function(){
-//            qqService(qq);
-//        }, 5000)
+        setTimeout(function(){
+            qqService(qq);
+        }, 8000);
     }
 };
 
