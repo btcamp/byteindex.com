@@ -16,7 +16,7 @@ var ByteIndex = window.ByteIndex || {};
 /* ==================================================
      judge mobile
 ================================================== */
-ByteIndex.browserRedirect=function() {
+ByteIndex.browserRedirect=function(qq) {
     var sUserAgent = navigator.userAgent.toLowerCase();
     var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
     var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
@@ -29,15 +29,9 @@ ByteIndex.browserRedirect=function() {
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         $(".service").css("display","none");
     }else{
-        $(function(){
-            setTimeout(function(){
-                var qq_list = new Array('626770319', '1365799928');
-                //随机
-                var qq_i = Math.floor(Math.random()*qq_list.length);
-                var element="<iframe style='display:none;' class='qq_iframe' src='tencent://message/?uin="+qq_list[qq_i]+"&Site=&menu=yes'></iframe>";
-                $("body").append(element);
-            }, 10000)
-        })
+//        setTimeout(function(){
+//            qqService(qq);
+//        }, 5000)
     }
 };
 
@@ -95,14 +89,17 @@ ByteIndex.listenerMenu = function(){
 ================================================== */
 
 ByteIndex.slider = function(){
+    var mes=judgeImgTittle();
+    var arrAnimationName=["flipInY","fadeInUp","fadeInDown","bounceInRight","bounceInLeft","bounceInDown","bounceInUp","zoomInDown","zoomInLeft","zoomInRight","zoomInUp"];
+    var arr=createRandom(3,0,arrAnimationName.length);//生成3个从0-arrAnimationName.length-1之间不重复的随机数
 	$.supersized({
 		// Functionality
 		slideshow               :   1,			// Slideshow on/off
 		autoplay				:	1,			// Slideshow starts playing automatically
 		start_slide             :   1,			// Start slide (0 is random)
 		stop_loop				:	0,			// Pauses slideshow on last slide
-		random					: 	0,			// Randomize slide order (Ignores start slide)
-		slide_interval          :   5000,		// Length between transitions
+		random					: 	0,			// RanZdomize slide order (Ignores start slide)
+		slide_interval          :   7000,		// Length between transitions
 		transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 		transition_speed		:	1000,		// Speed of transition
 		new_window				:	1,			// Image links open in new window/tab
@@ -125,15 +122,15 @@ ByteIndex.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '/_include/img/slider-images/img01.jpg', title : '<div class="slide-content"><img src="/_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
-											{image : '/_include/img/slider-images/img02.jpg', title : '<div class="slide-content"><img src="/_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''},
-											{image : '/_include/img/slider-images/img03.jpg', title : '<div class="slide-content"><img src="/_include/img/ByteindexLOGO.png" alt=""/></div>', thumb : '', url : ''}
+											{image : '/_include/img/slider-images/img04.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[0]]+'"><span>'+mes[0]+'</span></div>', thumb : '', url : ''},
+											{image : '/_include/img/slider-images/img02.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[1]]+'"><span>'+mes[1]+'</span></div>', thumb : '', url : ''},
+                                            {image : '/_include/img/slider-images/img03.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[2]]+'"><span>'+mes[2]+'</span></div>', thumb : '', url : ''},
 									],
 									
 		// Theme Options			   
 		progress_bar			:	0,			// Timer for each slide							
 		mouse_scrub				:	0
-		
+
 	});
 
 };
@@ -310,17 +307,26 @@ ByteIndex.language = function(){
  ================================================== */
 
 ByteIndex.imgHover = function(){
-    var img=$(".spread");
-    img.mouseenter(function(){
+    var img=$(".spread").find("img");
+    img.hover(function(){
         $(this).addClass("mouseOver");
         $(this).removeClass("mouseOut");
-    });
-    img.mouseout(function(){
+    },function(){
         $(this).removeClass("mouseOver");
         $(this).addClass("mouseOut");
     });
 };
 
+/* ==================================================
+ imgHover
+ ================================================== */
+
+ByteIndex.service = function(){
+    $(".qq").click(function(){
+        var qq=$(this).find("a").attr("id");
+        qqService(qq);
+    })
+};
 
 /* ==================================================
  Contact Form
@@ -402,9 +408,10 @@ $(document).ready(function(){
     ByteIndex.language();
     ByteIndex.form();
     ByteIndex.imgHover();
+    ByteIndex.service();
     setInterval(function(){
         change();
-    },8000);
+    },11000);
 });
 
 $(window).resize(function(){
@@ -436,7 +443,7 @@ function modalLoading(msg) {
     }
     bootbox.dialog({
         title: $(document).attr('title'),
-        message: '<img src="/_include/img/ajax-loader2.gif" />' + msg,
+        message: '<img src="/_include/img/ajax-loader2.gif" style="margin-right: 5px;"/>' + msg,
         animate: false,
         buttons: {}
     });
@@ -466,14 +473,10 @@ function finAlert(message, issuccess, config) {
     }
 }
 function change(){
-    function randomSort(a, b) {
-        return Math.random()>.5 ? -1 : 1;
-        //用Math.random()函数生成0~1之间的随机数与0.5比较，返回-1或1
-    }
     var arr =judgeArr();
     var arrAnimationName=["fadeIn","pulse","fadeInDown","fadeInUp","flipInY","bounceIn"];
     var arr2 = arr.sort(randomSort);
-    var num=parseInt(arrAnimationName.length*Math.random());
+    var num = Math.floor(Math.random()*arrAnimationName.length);
     var temp="";
     for(var i=0;i<arr2.length;i++){
         temp+='<div class="span3 profile animated '+arrAnimationName[num]+'">' +
@@ -506,4 +509,58 @@ function judgeArr(){
         ];
     }
     return mes;
+}
+
+function qqService(qq){
+    var qq_list = new Array('626770319', '1365799928');
+    //随机
+    var qq_i = Math.floor(Math.random()*qq_list.length);
+    if(!qq){
+        qq=qq_list[qq_i];
+    }
+    var element="<iframe style='display:none;' class='qq_iframe' src='tencent://message/?uin="+qq+"&Site=&menu=yes'></iframe>";
+    $("body").append(element);
+}
+
+function judgeImgTittle(){
+    var url = window.location.href.split("/");
+    var mes;
+    var flag=parseInt(url.indexOf("en"));
+    if(flag<0){
+        mes = [
+            "最佳科技，最佳奖项，永远领先",
+            "ByteIndex 可以为你建立完美的经纪业务，低成本快速启动",
+            "ByteIndex 参展澳门iFXEXPO外汇峰会"
+        ];
+    }else{
+        mes = [
+            "Best Technology, Best awards, Always Leading",
+            "ByteIndex can build a perfect brokerage business for you, low cost quick start",
+            "ByteIndex exhibitors Macau iFXEXPO exchange summit"
+        ];
+    }
+    return mes;
+}
+function randomSort(a, b) {
+    return Math.random()>.5 ? -1 : 1;
+    //用Math.random()函数生成0~1之间的随机数与0.5比较，返回-1或1
+}
+
+function createRandom(num , from , to)
+{
+    var arr=[];
+    var json={};
+    while(arr.length<num)
+    {
+        //产生单个随机数
+        var ranNum=Math.floor(Math.random()*(to-from))+from;
+        //通过判断json对象的索引值是否存在 来标记 是否重复
+        if(!json[ranNum])
+        {
+            json[ranNum]=1;
+            arr.push(ranNum);
+        }
+    }
+    return arr;
+
 }

@@ -345,6 +345,7 @@
 @media(max-width:768px){
 	.owl-theme .owl-controls {
 	margin-top: 18px;
+        display: none !important;
 	}
 
 }
