@@ -16,22 +16,24 @@ var ByteIndex = window.ByteIndex || {};
 /* ==================================================
      judge mobile
 ================================================== */
-ByteIndex.browserRedirect=function(qq) {
-    var sUserAgent = navigator.userAgent.toLowerCase();
-    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-    var bIsAndroid = sUserAgent.match(/android/i) == "android";
-    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-        $(".service").css("display","none");
+ByteIndex.browserRedirect=function() {
+    if(/AppleWebKit.*Mobile/i.test(navigator.userAgent)
+        || /Android/i.test(navigator.userAgent)
+        || /BlackBerry/i.test(navigator.userAgent)
+        || /IEMobile/i.test(navigator.userAgent)
+        || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(/iPad/i.test(navigator.userAgent)){
+            $(".service").css("display","none");
+        }else{
+            $(".service").css("display","none");
+        }
     }else{
         setTimeout(function(){
-            qqService(qq);
+            qqService();
         }, 8000);
+        setInterval(function(){
+            change();
+        },11000);
     }
 };
 
@@ -122,9 +124,9 @@ ByteIndex.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '/_include/img/slider-images/img04.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[0]]+'"><span>'+mes[0]+'</span></div>', thumb : '', url : ''},
-											{image : '/_include/img/slider-images/img02.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[1]]+'"><span>'+mes[1]+'</span></div>', thumb : '', url : ''},
-                                            {image : '/_include/img/slider-images/img03.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[2]]+'"><span>'+mes[2]+'</span></div>', thumb : '', url : ''},
+											{image : '/_include/img/slider-images/img01.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[0]]+'"><span>'+mes[0]+'</span></div>', thumb : '', url : ''},
+											{image : '/_include/img/slider-images/img02.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[1]]+'"><span><span class="animated bounce">ByteIndex</span>'+mes[1]+'</span></div>', thumb : '', url : ''},
+                                            {image : '/_include/img/slider-images/img03.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[2]]+'"><span><span class="animated bounce">ByteIndex</span>'+mes[2]+'</span></div>', thumb : '', url : ''},
 									],
 									
 		// Theme Options			   
@@ -191,10 +193,8 @@ ByteIndex.goUp = function(){
 
 ByteIndex.scrollToTop = function(){
 	var windowWidth = $(window).width(),
-		didScroll = false;
-
+		didScroll = false,windowHeight= $(window).height();
 	var $arrow = $('#back-to-top');
-
 	$arrow.click(function(e) {
 		$('body,html').animate({ scrollTop: "0" }, 750, 'easeOutExpo' );
 		e.preventDefault();
@@ -203,11 +203,10 @@ ByteIndex.scrollToTop = function(){
 	$(window).scroll(function() {
 		didScroll = true;
 	});
-
 	setInterval(function() {
 		if( didScroll ) {
 			didScroll = false;
-			if( $(window).scrollTop() > 1000 ) {
+			if( $(window).scrollTop() >= windowHeight-30 ) {
 				$arrow.css('display', 'block');
 			} else {
 				$arrow.css('display', 'none');
@@ -318,14 +317,15 @@ ByteIndex.imgHover = function(){
 };
 
 /* ==================================================
- imgHover
+ QQ service
  ================================================== */
 
 ByteIndex.service = function(){
     $(".qq").click(function(){
         var qq=$(this).find("a").attr("id");
         qqService(qq);
-    })
+    });
+
 };
 
 /* ==================================================
@@ -409,9 +409,6 @@ $(document).ready(function(){
     ByteIndex.form();
     ByteIndex.imgHover();
     ByteIndex.service();
-    setInterval(function(){
-        change();
-    },11000);
 });
 
 $(window).resize(function(){
@@ -529,14 +526,14 @@ function judgeImgTittle(){
     if(flag<0){
         mes = [
             "最佳科技，最佳奖项，永远领先",
-            "ByteIndex 可以为你建立完美的经纪业务，低成本快速启动",
-            "ByteIndex 参展澳门iFXEXPO外汇峰会"
+            "可以为你建立完美的经纪业务，低成本快速启动",
+            "参展澳门iFXEXPO外汇峰会"
         ];
     }else{
         mes = [
             "Best Technology, Best awards, Always Leading",
-            "ByteIndex can build a perfect brokerage business for you, low cost quick start",
-            "ByteIndex exhibitors Macau iFXEXPO exchange summit"
+            " can build a perfect brokerage business for you,<br/> low cost quick start",
+            " exhibitors Macau iFXEXPO exchange summit"
         ];
     }
     return mes;
