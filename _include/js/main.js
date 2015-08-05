@@ -352,7 +352,7 @@ ByteIndex.form=function(){
             var mes=judgeAjaxMes();
             $.ajax({
                 type: "post",
-                url: "",
+                url: "/SendEmail.ashx",
                 data: fields,
                 dataType: 'json',
                 beforeSend: function myfunction() {
