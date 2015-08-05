@@ -246,16 +246,16 @@ h3.spec {
 	width: 100%;
 	height: 100%;
 	background: #8E8E8E;
-	opacity: 0.7;
+	opacity: 0.4;
 	filter: alpha(opacity=70);
 	z-index: 0;
 }
 
 #home-slider .slider-text {
 	position: absolute;
-	top: 25%;
+	top: 20%;
 	width:100%;
-	height: 50%;
+	height: 60%;
 	text-align: center;
 }
 
@@ -268,10 +268,24 @@ h3.spec {
 }
 
 #home-slider .slide-content {
-	font-size: 2em;
-	color: #f4f4f4;
+	font-size: 3.0em;
+	color: #E2E2E2;
     margin-top:10%;
     padding: 0 2%;
+}
+@media(max-width: 480px){
+    #home-slider .slide-content {
+        font-size: 2.2em;
+        color: #F0F0F0;
+        margin-top:30%;
+        padding: 0 3%;
+    }
+}
+#home-slider .slide-content span{
+    line-height: 1.4em;
+}
+#home-slider .slide-content span span{
+    font-size: 1.1em;
 }
 #home-slider .control-nav {
 	position: absolute;
@@ -320,7 +334,7 @@ h3.spec {
 }
 #home-slider #nextslide i,
 #home-slider #prevslide i {
-	font-size: 16px;
+	font-size: 18px;
 	color: #DE5E60;
 	position: absolute;
 	left: 50%;
@@ -356,7 +370,6 @@ h3.spec {
 	background-image: none;
 	width: 12px;
 	height: 12px;
-
 	-webkit-border-radius: 999px;
 	-moz-border-radius: 999px;
 	border-radius: 999px;
@@ -397,7 +410,7 @@ h3.spec {
 }
 
 #home-slider #nextsection i {
-	font-size: 16px;
+	font-size: 18px;
 	color: #DE5E60;
 	position: absolute;
 	left: 50%;
@@ -425,7 +438,7 @@ header .sticky-nav {
 	width: 100%;
 	height: 60px;
 	background: #EEEEEE;
-	z-index: 1001;
+	z-index: 101;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -1036,7 +1049,7 @@ footer .credits a{
 }
 
 #back-to-top i {
-	font-size: 16px;
+	font-size: 18px;
 	color: #DE5E60;
 	position: absolute;
 	left: 50%;
@@ -1059,7 +1072,7 @@ footer .credits a{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	z-index: 700;
+	z-index: 10000;
 }
 
 #jpreSlide{
@@ -1087,8 +1100,7 @@ footer .credits a{
 	left: 50%;
 	top: 50%;
 	margin: -25px 0 0 -25px;
-	z-index: 800;
-
+	z-index: 10001;
 	font-size: 24px;
 	color: #FFFFFF;
 	-webkit-animation: circle 1s infinite forwards;
@@ -1102,7 +1114,7 @@ footer .credits a{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	z-index: 11;
+	z-index: 100;
 	margin: -50px 0 0 -50px;
 	width: 100px;
 	height: 100px;
@@ -1337,7 +1349,6 @@ footer .credits a{
     }
 }
 
-
 .contact-content ul li{
     list-style-type: none;
     font-size: 16px;
@@ -1435,7 +1446,7 @@ footer .credits a{
     position: fixed;
     top:50%;
     margin-top: -90px;
-    z-index: 1000;
+    z-index: 100;
     height: 175px;
     right:-68px ;
 }
@@ -1447,21 +1458,17 @@ footer .credits a{
     -o-transition:all 1s;
 }
 .service .online{
-    color: white;
     background: #e2e2e2;
     opacity: .7;
     float: left;
-    width: 30px;
     font-size: 1.0em;
-    height: 147px;
-    height: 145px\9\0;
-    *height: 147px;
-    +height: 147px;
+    height: 146px\9\0;
+    *height: 146px;
     border-radius: 20px 0 0 20px;
+    overflow: hidden;
     padding: 0 2px;
-    padding: 0 5px \9\0;
-    *padding: 0 5px;
-    +padding: 0 5px;
+    padding: 0 8px 0 2px \9\0;
+    *padding: 0 8px 0 2px;
 }
 .service .qq-content{
     float: left;
@@ -1500,12 +1507,17 @@ footer .credits a{
 
 .regulatory-content ul li{
     margin: 15px 0;
-    height: 50px;
+    height:50px;
     line-height: 25px;
 }
 @media (max-width: 979px) {
     .regulatory-description{
         margin-top: 30px;
+    }
+    .regulatory-content ul li{
+        margin: 15px 0;
+        height:80px;
+        line-height: 25px;
     }
 }
 .mouseOver{
