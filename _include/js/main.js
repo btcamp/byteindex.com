@@ -532,7 +532,7 @@ function judgeImgTittle(){
     }else{
         mes = [
             "Best Technology, Best awards, Always Leading",
-            " can build a perfect brokerage business for you,<br/> low cost quick start",
+            " can build a perfect brokerage business for you,low cost quick start",
             " exhibitors Macau iFXEXPO exchange summit"
         ];
     }
