@@ -93,7 +93,7 @@ ByteIndex.listenerMenu = function(){
 ByteIndex.slider = function(){
     var mes=judgeImgTittle();
     var arrAnimationName=["flipInY","fadeInUp","fadeInDown","bounceInRight","bounceInLeft","bounceInDown","bounceInUp","zoomInDown","zoomInLeft","zoomInRight","zoomInUp"];
-    var arr=createRandom(3,0,arrAnimationName.length);//生成3个从0-arrAnimationName.length-1之间不重复的随机数
+    var arr=createRandom(4,0,arrAnimationName.length);//生成4个从0-arrAnimationName.length-1之间不重复的随机数
 	$.supersized({
 		// Functionality
 		slideshow               :   1,			// Slideshow on/off
@@ -127,9 +127,11 @@ ByteIndex.slider = function(){
 											{image : '/_include/img/slider-images/img01.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[0]]+'"><span>'+mes[0]+'</span></div>', thumb : '', url : ''},
 											{image : '/_include/img/slider-images/img02.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[1]]+'"><span><span class="animated bounce">ByteIndex</span>'+mes[1]+'</span></div>', thumb : '', url : ''},
                                             {image : '/_include/img/slider-images/img03.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[2]]+'"><span><span class="animated bounce">ByteIndex</span>'+mes[2]+'</span></div>', thumb : '', url : ''},
+                                            {image : '/_include/img/slider-images/img04.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[3]]+'"><span style="position:relative;top:-40px;font-size: 0.9em">'+mes[3]+'</span></div>', thumb : '', url : ''}
 									],
 									
-		// Theme Options			   
+
+
 		progress_bar			:	0,			// Timer for each slide							
 		mouse_scrub				:	0
 
@@ -527,13 +529,15 @@ function judgeImgTittle(){
         mes = [
             "最佳科技，最佳奖项，永远领先",
             "可以为你建立完美的经纪业务，低成本快速启动",
-            "参展澳门iFXEXPO外汇峰会"
+            "参展澳门iFXEXPO外汇峰会",
+            "交易系统革命性升级——微信微盘交易系统。<br/>打开微信扫描二维码直接交易,无需下载客户端。<br/>交易系统限量免费部署中!"
         ];
     }else{
         mes = [
             "Best Technology, Best awards, Always Leading",
             " can build a perfect brokerage business for you,low cost quick start",
-            " exhibitors Macau iFXEXPO exchange summit"
+            " exhibitors Macau iFXEXPO exchange summit",
+            "Revolutionary Trading System Upgrade - micro-letter-trading system <br/> open mobile micro-channel scan two-dimensional code to deal directly, without having to download the client <br/> free limited trading system deployment..!"
         ];
     }
     return mes;
