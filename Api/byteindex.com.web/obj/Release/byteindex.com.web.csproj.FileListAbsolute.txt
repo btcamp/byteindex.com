@@ -1,0 +1,5 @@
+D:\Work\byteindex.com\Api\byteindex.com.web\bin\byteindex.com.web.dll.config
+D:\Work\byteindex.com\Api\byteindex.com.web\bin\byteindex.com.web.dll
+D:\Work\byteindex.com\Api\byteindex.com.web\bin\byteindex.com.web.pdb
+D:\Work\byteindex.com\Api\byteindex.com.web\obj\Release\byteindex.com.web.dll
+D:\Work\byteindex.com\Api\byteindex.com.web\obj\Release\byteindex.com.web.pdb
