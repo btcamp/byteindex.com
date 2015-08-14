@@ -1072,14 +1072,14 @@ footer .credits a{
    Preloader
 ================================================== */
 
-#jpreOverlay,
-#jSplash {
-	background-color: #6E6E6E;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 10000;
-}
+/*#jpreOverlay,*/
+/*#jSplash {*/
+	/*background-color: #6E6E6E;*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*z-index: 10000;*/
+/*}*/
 
 #jpreSlide{
 	position: absolute;

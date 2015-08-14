@@ -386,15 +386,15 @@ ByteIndex.slider();
 
 $(document).ready(function(){
 	// Preload the page with jPreLoader
-	$('body').jpreLoader({
-		splashID: "#jSplash",
-		showSplash: true,
-		showPercentage: true,
-		autoClose: true,
-		splashFunction: function() {
-			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
-		}
-	});
+//	$('body').jpreLoader({
+//		splashID: "#jSplash",
+//		showSplash: true,
+//		showPercentage: true,
+//		autoClose: true,
+//		splashFunction: function() {
+//			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
+//		}
+//	});
     ByteIndex.browserRedirect();
 	ByteIndex.nav();
 	ByteIndex.mobileNav();
