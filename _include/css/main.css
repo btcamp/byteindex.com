@@ -6,7 +6,7 @@ Theme Name: byteIndex Version: 1.0
 ================================================== */
 html, body {
 	height: 100%;
-    color: #515151;
+    color: #3e3e3e;
 }
 .row{
     margin: 5px 0;
@@ -19,7 +19,7 @@ html, html a{
 }
 
 body{
-	font-size:16px;
+	font-size:15px;
 	line-height:28px;
 }
 a{
@@ -246,7 +246,7 @@ h3.spec {
 	width: 100%;
 	height: 100%;
 	background: #8E8E8E;
-	opacity: 0.4;
+	opacity: 0.3;
 	filter: alpha(opacity=70);
 	z-index: 0;
 }
@@ -257,6 +257,11 @@ h3.spec {
 	width:100%;
 	height: 80%;
 	text-align: center;
+}
+.slider-text .add-silde{
+    position:relative;
+    top:-40px;
+    font-size: 0.8em;
 }
 
 #home-slider #slidecaption {
@@ -270,13 +275,16 @@ h3.spec {
 #home-slider .slide-content {
 	font-size: 3.0em;
 	color: #E2E2E2;
-    margin-top:10%;
-    padding: 0 5%;
+    margin-top:11%;
+}
+.slide-content span{
+    font-family: "黑体";
 }
 @media(min-width: 1500px){
     #home-slider .slide-content {
         font-size: 4.6em;
-        margin-top:11%;
+        margin-top:12%;
+        padding: 0 5%;;
     }
 }
 @media(max-width: 480px){
@@ -284,7 +292,7 @@ h3.spec {
         font-size: 2.0em;
         color: #F0F0F0;
         margin-top:30%;
-        padding: 0 4%;
+        padding: 0 3%;
     }
 }
 #home-slider .slide-content span{
@@ -443,7 +451,7 @@ header .sticky-nav {
 	position: relative;
 	width: 100%;
 	height: 60px;
-	background: #EEEEEE;
+	background: #fcfcfc;
 	z-index: 101;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -499,7 +507,7 @@ nav#menu #menu-nav {
 nav#menu #menu-nav>li {
 	list-style: none;
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0 15px;
 }
 
 nav#menu #menu-nav li:first-child {
@@ -508,7 +516,7 @@ nav#menu #menu-nav li:first-child {
 
 nav#menu #menu-nav li a {
 	color: #555555;
-	font-size: 16px;
+	font-size: 15px;
 	display: block;
 }
 
@@ -612,7 +620,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .title-page .title {
-	font-size: 34px;
+	font-size: 32px;
 	margin: 0 0 10px 0;
 }
 
@@ -1020,7 +1028,7 @@ footer {
 
 footer .credits {
 	color: #555555;
-	font-size: 16px;
+	font-size: 15px;
 	margin-bottom: 0;
 	padding: 5px 0;
 }
@@ -1357,7 +1365,6 @@ footer .credits a{
 
 .contact-content ul li{
     list-style-type: none;
-    font-size: 16px;
     padding: 10px 0;
     line-height: 25px;
 }
@@ -1420,7 +1427,7 @@ footer .credits a{
     }
     .language ul{
         position: absolute;
-        background: #EEEEEE;
+        background: #FCFCFC;
         left: -25px;
         top: 55px;
     }
