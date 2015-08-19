@@ -538,8 +538,7 @@ function randomSort(a, b) {
     //用Math.random()函数生成0~1之间的随机数与0.5比较，返回-1或1
 }
 
-function createRandom(num , from , to)
-{
+function createRandom(num , from , to){
     var arr=[];
     var json={};
     while(arr.length<num)
@@ -554,5 +553,4 @@ function createRandom(num , from , to)
         }
     }
     return arr;
-
 }
