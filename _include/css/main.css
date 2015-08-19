@@ -275,15 +275,16 @@ h3.spec {
 #home-slider .slide-content {
 	font-size: 3.0em;
 	color: #E2E2E2;
-    margin-top:11%;
+    margin-top:10.8%;
 }
 .slide-content span{
     font-family: "黑体";
+    font-weight: 500;
 }
-@media(min-width: 1500px){
+@media(min-width:1680px){
     #home-slider .slide-content {
         font-size: 4.6em;
-        margin-top:12%;
+        margin-top:11.5%;
         padding: 0 5%;;
     }
 }
@@ -451,7 +452,7 @@ header .sticky-nav {
 	position: relative;
 	width: 100%;
 	height: 60px;
-	background: #fcfcfc;
+	background: #fbfbfb;
 	z-index: 101;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -870,20 +871,19 @@ nav#menu #menu-nav li a:hover {
 }
 #contact-form input,
 #contact-form textarea {
-    border: none;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
     border-radius: 0;
     -webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	background: #EEEEEE;
-    color: #555555;
+    color: #3c3c3c;
     font-size: 16px;
     height: auto;
     padding: 15px;
 	margin: 0;
     resize: none;
+    border: 1px solid #EEEEEE;
 }
 
 #contact-form input {
@@ -1428,7 +1428,7 @@ footer .credits a{
     .language ul{
         position: absolute;
         background: #FCFCFC;
-        left: -25px;
+        left: -23px;
         top: 55px;
     }
     .language ul li{
@@ -1471,7 +1471,7 @@ footer .credits a{
     -o-transition:all 1s;
 }
 .service .online{
-    background: #e2e2e2;
+    background: #eeeeee;
     opacity: .7;
     float: left;
     font-size: 1.0em;
