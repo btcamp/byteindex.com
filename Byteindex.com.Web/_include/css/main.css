@@ -245,7 +245,7 @@ h3.spec {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #8E8E8E;
+	background: #bdbdbd;
 	opacity: 0.3;
 	filter: alpha(opacity=70);
 	z-index: 0;
@@ -273,9 +273,10 @@ h3.spec {
 }
 
 #home-slider .slide-content {
-	font-size: 3.0em;
+	font-size: 2.9em;
 	color: #E2E2E2;
-    margin-top:10.8%;
+    margin-top:10.5%;
+    padding: 0 1%;
 }
 .slide-content span{
     font-family: "黑体";
@@ -283,9 +284,9 @@ h3.spec {
 }
 @media(min-width:1680px){
     #home-slider .slide-content {
-        font-size: 4.6em;
-        margin-top:11%;
-        padding: 0 5%;;
+        font-size: 4.4em;
+        margin-top:11.5%;
+        padding: 0 1%;
     }
 }
 @media(max-width: 480px){
@@ -305,7 +306,7 @@ h3.spec {
 #home-slider .control-nav {
 	position: absolute;
 	width: 100%;
-	background: #EEEEEE;
+	background: #F6F6F6;
 	height: 45px;
 	bottom:10px;
 	z-index: 2;
@@ -314,7 +315,7 @@ h3.spec {
 #home-slider #nextslide,
 #home-slider #prevslide {
 	background-image: none;
-	background-color: #DDDDDD;
+	background-color: #EBEBEB;
 	display: inline-block;
 	margin: 0;
 	position: relative;
@@ -330,11 +331,6 @@ h3.spec {
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
 }
-
-#home-slider #nextslide {
-	margin-left: -3px;
-}
-
 #home-slider #nextsection {
 	float:right;
 }
@@ -405,7 +401,7 @@ h3.spec {
 }
 
 #home-slider #nextsection {
-	background-color:#DDDDDD;
+	background-color:#EBEBEB;
 	margin: 0;
 	position: relative;
 	float:right;
@@ -508,7 +504,7 @@ nav#menu #menu-nav {
 nav#menu #menu-nav>li {
 	list-style: none;
 	display: inline-block;
-	margin: 0 15px;
+	margin: 0 10px;
 }
 
 nav#menu #menu-nav li:first-child {
@@ -528,7 +524,7 @@ nav#menu #menu-nav li a:hover {
 
 @media(max-width: 320px) {
     .menu-nav-mobile li{
-        line-height: 0;
+        line-height:0;
     }
 }
 
@@ -578,7 +574,7 @@ nav#menu #menu-nav li a:hover {
 	display: none;
 	text-align: center;
 	width: 100%;
-	background: #EEEEEE;
+	background: #F6F6F6;
 	border-bottom: 1px solid #787f8c;
 	position: relative;
 	float: left;
@@ -587,13 +583,13 @@ nav#menu #menu-nav li a:hover {
 
 #navigation-mobile li {
 	list-style: none;
-	border-top: 1px solid #dadada;
+	border-top: 1px solid #ededed;
 }
 
 #navigation-mobile li a{
 	display: block;
 	font-size: 16px;
-	padding: 20px 0;
+	padding: 10px 0;
 }
 
 
@@ -602,7 +598,7 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 .page {
-	background: #F6F6F6;
+	background: #f9f9f9;
 	padding: 50px 0 30px 0;
 	position: relative;
 	z-index: 99;
@@ -883,7 +879,7 @@ nav#menu #menu-nav li a:hover {
     padding: 15px;
 	margin: 0;
     resize: none;
-    border: 1px solid #EEEEEE;
+    border: 1px solid #F6F6F6;
 }
 
 #contact-form input {
@@ -953,7 +949,7 @@ nav#menu #menu-nav li a:hover {
 	width: 40px;
 	height: 40px;
 
-	background: #EEEEEE;
+	background: #F6F6F6;
 
 	-webkit-transition: all 400ms ease-out 0s;
 	   -moz-transition: all 400ms ease-out 0s;
@@ -1020,7 +1016,7 @@ footer {
 	position: relative;
 	width: 100%;
 	height: auto;
-	background:#EEEEEE;
+	background:#F6F6F6;
 	text-align: center;
 	z-index: 99;
     padding: 10px 0;
@@ -1041,7 +1037,7 @@ footer .credits a{
 
 #back-to-top {
 	display: none;
-	background-color: #DDDDDD;
+	background-color: #EBEBEB;
 	margin: 0;
 	position: fixed;
 	bottom: 0;
@@ -1428,7 +1424,7 @@ footer .credits a{
     .language ul{
         position: absolute;
         background: #FCFCFC;
-        left: -23px;
+        left: -24px;
         top: 55px;
     }
     .language ul li{
@@ -1451,9 +1447,19 @@ footer .credits a{
     }
 }
 
-.technology{
+.about{
     margin-top:-60px;
     padding-top: 50px;
+}
+.about-content p{
+    line-height: 35px;
+    text-indent: 2em;
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+    .about-content{
+        margin-top: 20px;
+    }
 }
 .service{
     position: fixed;
