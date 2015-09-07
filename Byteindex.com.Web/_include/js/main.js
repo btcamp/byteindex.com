@@ -28,12 +28,12 @@ jQuery(function($){
                 $(".service").css("display","none");
             }
         }else{
-//            setTimeout(function(){
-//                qqService();
-//            }, 8000);
-//            setInterval(function(){
-//                change();
-//            },11000);
+            setTimeout(function(){
+                qqService();
+            }, 8000);
+            setInterval(function(){
+                change();
+            },11000);
         }
     };
 

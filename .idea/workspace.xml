@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b24c1071-bc08-4a31-8e5d-8610fe92cd96" name="Default" comment="8.14">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Byteindex.com.Web/index.html" afterPath="$PROJECT_DIR$/Byteindex.com.Web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Byteindex.com.Web/en/index.html" afterPath="$PROJECT_DIR$/Byteindex.com.Web/en/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Byteindex.com.Web/_include/css/main.css" afterPath="$PROJECT_DIR$/Byteindex.com.Web/_include/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Byteindex.com.Web/_include/js/main.js" afterPath="$PROJECT_DIR$/Byteindex.com.Web/_include/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Byteindex.com.Web/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Byteindex.com.Web/.idea/workspace.xml" />
     </list>
     <list id="0fcfcb82-49d2-4c97-8069-c0e31cd06579" name="Rejected commit: Default" comment="8.14" />
     <ignored path="byteindex.iws" />
@@ -31,41 +26,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Byteindex.com.Web/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3333333" vertical-offset="1420" max-vertical-offset="9540">
-              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-              <folding>
-                <element signature="tag#div#0;tag#section#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Byteindex.com.Web/en/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20152092" vertical-offset="2194" max-vertical-offset="10380">
-              <caret line="115" column="29" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Byteindex.com.Web/_include/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7985" max-vertical-offset="12420">
-              <caret line="406" column="26" selection-start-line="406" selection-start-column="26" selection-end-line="406" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.6486486" vertical-offset="420" max-vertical-offset="12420">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
               <folding>
-                <marker date="1441612372968" expanded="false" signature="6484:6589" placeholder="..." />
-                <marker date="1441612372968" expanded="true" signature="18662:18680" placeholder="..." />
+                <marker date="1441612603681" expanded="false" signature="6472:6577" placeholder="..." />
+                <marker date="1441612603681" expanded="true" signature="18650:18668" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -94,8 +62,8 @@
         <option value="$PROJECT_DIR$/_include/css/main.css" />
         <option value="$PROJECT_DIR$/Byteindex.com.Web/_include/css/main.css" />
         <option value="$PROJECT_DIR$/Byteindex.com.Web/index.html" />
-        <option value="$PROJECT_DIR$/Byteindex.com.Web/_include/js/main.js" />
         <option value="$PROJECT_DIR$/Byteindex.com.Web/en/index.html" />
+        <option value="$PROJECT_DIR$/Byteindex.com.Web/_include/js/main.js" />
       </list>
     </option>
   </component>
@@ -338,7 +306,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="728" extended-state="1" />
+    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -431,8 +399,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="11220">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding>
-            <marker date="1441612372968" expanded="false" signature="6484:6589" placeholder="..." />
-            <marker date="1441612372968" expanded="true" signature="18662:18680" placeholder="..." />
+            <marker date="1441612603681" expanded="false" signature="6472:6577" placeholder="..." />
+            <marker date="1441612603681" expanded="true" signature="18650:18668" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -462,8 +430,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="9812" max-vertical-offset="11220">
           <caret line="503" column="0" selection-start-line="503" selection-start-column="0" selection-end-line="512" selection-end-column="1" />
           <folding>
-            <marker date="1441612372968" expanded="false" signature="6484:6589" placeholder="..." />
-            <marker date="1441612372968" expanded="true" signature="18662:18680" placeholder="..." />
+            <marker date="1441612603681" expanded="false" signature="6472:6577" placeholder="..." />
+            <marker date="1441612603681" expanded="true" signature="18650:18668" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -511,20 +479,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Byteindex.com.Web/_include/js/main.js">
+    <entry file="file://$PROJECT_DIR$/Byteindex.com.Web/en/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7985" max-vertical-offset="12420">
-          <caret line="406" column="26" selection-start-line="406" selection-start-column="26" selection-end-line="406" selection-end-column="26" />
+        <state vertical-scroll-proportion="4.3726234" vertical-offset="0" max-vertical-offset="10380">
+          <caret line="115" column="29" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="29" />
           <folding>
-            <marker date="1441612372968" expanded="false" signature="6484:6589" placeholder="..." />
-            <marker date="1441612372968" expanded="true" signature="18662:18680" placeholder="..." />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Byteindex.com.Web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333" vertical-offset="1420" max-vertical-offset="9540">
+        <state vertical-scroll-proportion="0.35928145" vertical-offset="1420" max-vertical-offset="9540">
           <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
           <folding>
             <element signature="tag#div#0;tag#section#0;tag#body#0;tag#html#0" expanded="false" />
@@ -534,13 +502,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Byteindex.com.Web/en/index.html">
+    <entry file="file://$PROJECT_DIR$/Byteindex.com.Web/_include/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20152092" vertical-offset="2194" max-vertical-offset="10380">
-          <caret line="115" column="29" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.6486486" vertical-offset="420" max-vertical-offset="12420">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1441612603681" expanded="false" signature="6472:6577" placeholder="..." />
+            <marker date="1441612603681" expanded="true" signature="18650:18668" placeholder="..." />
           </folding>
         </state>
       </provider>
