@@ -28,12 +28,12 @@ jQuery(function($){
                 $(".service").css("display","none");
             }
         }else{
-            setTimeout(function(){
-                qqService();
-            }, 8000);
-            setInterval(function(){
-                change();
-            },11000);
+//            setTimeout(function(){
+//                qqService();
+//            }, 8000);
+//            setInterval(function(){
+//                change();
+//            },11000);
         }
     };
 
@@ -370,6 +370,65 @@ jQuery(function($){
             return false;
         });
     };
+    ByteIndex.ObtainNews1=function(){
+        var trs=$(".news-content-1").find("tr");
+        if(trs.length){
+            var trIndex=0;
+            var date=trs.eq(trIndex).children("td").eq(0).html();
+            var url=trs.eq(trIndex).children("td").eq(1).html();
+            var content=trs.eq(trIndex).children("td").eq(2).html();
+            var temp='<li class="animated fadeInUp"><span>'+date+'</span><a href="'+url+'">'+content+'</a></li>';
+            $("#news-1").html(temp);
+            setInterval(function(){
+                trIndex++;
+                if(trIndex>=trs.length){
+                    trIndex=0;
+                }
+                var date=trs.eq(trIndex).children("td").eq(0).html();
+                var url=trs.eq(trIndex).children("td").eq(1).html();
+                var content=trs.eq(trIndex).children("td").eq(2).html();
+                var temp='<li class="animated fadeInUp"><span>'+date+'</span><a href="'+url+'">'+content+'</a></li>';
+                $("#news-1").html(temp);
+            },6000);
+        }
+
+    };
+    ByteIndex.ObtainNews2=function(){
+        var trs=$(".news-content-2").find("tr");
+        var url = window.location.href.split("/");
+        var mes;
+        var flag=parseInt(url.indexOf("en"));
+        if(flag<0){
+            mes="用户："
+        }else{
+            mes="User:"
+        }
+        if(trs.length){
+            var trIndex=0;
+            var time=trs.eq(trIndex).children("td").eq(0).html();
+            var account=trs.eq(trIndex).children("td").eq(1).html();
+            if(account){
+                account=account.replace(/(.{3}).*(.{3})/,"$1*****$2");
+            }
+            var content=trs.eq(trIndex).children("td").eq(2).html();
+            var temp='<li class="animated fadeInUp"><span>'+time+'</span>'+mes+' <span>'+account+'</span><span>'+content+'</span></li>';
+            $("#news-2").html(temp);
+            setInterval(function(){
+                trIndex++;
+                if(trIndex>=trs.length){
+                    trIndex=0;
+                }
+                var time=trs.eq(trIndex).children("td").eq(0).html();
+                var account=trs.eq(trIndex).children("td").eq(1).html();
+                if(account){
+                    account=account.replace(/(.{3}).*(.{3})/,"$1*****$2");
+                }
+                var content=trs.eq(trIndex).children("td").eq(2).html();
+                var temp='<li class="animated fadeInUp"><span>'+time+'</span>用户: <span>'+account+'</span><span>'+content+'</span></li>';
+                $("#news-2").html(temp);
+            },5000);
+        }
+    };
     /* ==================================================
      Init
      ================================================== */
@@ -401,7 +460,8 @@ jQuery(function($){
         ByteIndex.form();
         ByteIndex.imgHover();
         ByteIndex.service();
-
+        ByteIndex.ObtainNews1();
+        ByteIndex.ObtainNews2();
     });
 
     $(window).resize(function(){

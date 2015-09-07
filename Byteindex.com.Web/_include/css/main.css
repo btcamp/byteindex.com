@@ -599,14 +599,14 @@ nav#menu #menu-nav li a:hover {
 
 .page {
 	background: #f9f9f9;
-	padding: 50px 0 30px 0;
+	padding: 40px 0 30px 0;
 	position: relative;
 	z-index: 99;
 }
 
 .page-alternate {
 	background: #fdfdfd;
-    padding: 50px 0 30px 0;
+    padding: 40px 0 30px 0;
 	position: relative;
 	z-index: 99;
 }
@@ -1446,20 +1446,9 @@ footer .credits a{
         width: 450px;
     }
 }
-
-.about{
+.news{
     margin-top:-60px;
     padding-top: 50px;
-}
-.about-content p{
-    line-height: 35px;
-    text-indent: 2em;
-    font-size: 16px;
-}
-@media (max-width: 768px) {
-    .about-content{
-        margin-top: 20px;
-    }
 }
 .service{
     position: fixed;
@@ -1564,4 +1553,39 @@ footer .credits a{
     -ms-transform: scale(1.0);
     -o-transform:  scale(1.0);
     transform:  scale(1.0);
+}
+.news .news-title{
+    text-indent: 1.8em;
+}
+.news .news-title i{
+    font-size:1.5em;
+    color: #DE5E60;
+    position: relative;
+    top: 4px;
+    left: -20px;
+}
+.news .news-title span{
+    position: relative;
+    top: -4px;
+}
+.news ul{
+    overflow: hidden;
+}
+.news ul li{
+    padding-bottom: 0;
+}
+.news .news-1-content span{
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+.news .news-2-content span{
+    margin-right: 5px;
+}
+#about.page{
+    padding: 10px 0 3px 0;
+}
+#about a:hover{
+    text-decoration: underline;
 }
