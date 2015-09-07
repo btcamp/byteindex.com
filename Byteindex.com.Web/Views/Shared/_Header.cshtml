@@ -1,100 +1,26 @@
-﻿    <!-- HEADER -->
-<header id="header">
-    <div id="logo-group">
-
-        <!-- PLACE YOUR LOGO HERE -->
-        <span id="logo"> <img src="~/content/img/logo.png" alt="SmartAdmin"> </span>
-        <!-- END LOGO PLACEHOLDER -->
-        @if (Request.IsAuthenticated)
-        {
-            <!-- Note: The activity badge color changes when clicked and resets the number to 0
-            Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
-            <span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>
-
-        <!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
-            <div class="ajax-dropdown">
-
-                <!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications" -->
-                <div class="btn-group btn-group-justified" data-toggle="buttons">
-                    <label class="btn btn-default">
-                        <input type="radio" name="activity" id="~/content/ajax/notify/mail.html">
-                        Msgs (14)
-                    </label>
-                    <label class="btn btn-default">
-                        <input type="radio" name="activity" id="~/content/ajax/notify/notifications.html">
-                        notify (3)
-                    </label>
-                    <label class="btn btn-default">
-                        <input type="radio" name="activity" id="~/content/ajax/notify/tasks.html">
-                        Tasks (4)
-                    </label>
-                </div>
-
-                <!-- notification content -->
-                <div class="ajax-notifications custom-scroll">
-
-                    <div class="alert alert-transparent">
-                        <h4>Click a button to show messages here</h4>
-                        This blank page message helps protect your privacy, or you can show the first message here automatically.
-                    </div>
-
-                    <i class="fa fa-lock fa-4x fa-border"></i>
-
-                </div>
-                <!-- end notification content -->
-                <!-- footer: refresh area -->
-                <span>
-                    Last updated on: 12/12/2013 9:43AM
-                    <button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Loading..." class="btn btn-xs btn-default pull-right">
-                    <i class="fa fa-refresh"></i>
-                </button>
-                </span>
-                <!-- end footer -->
-
-            </div>
-            <!-- END AJAX-DROPDOWN -->
-        }
-    </div>
-    @if (Request.IsAuthenticated)
-    {
-    <!-- projects dropdown -->
-        <div class="project-context hidden-xs">
-
-            <span class="label">Projects:</span>
-            <span class="project-selector dropdown-toggle" data-toggle="dropdown">Recent projects <i class="fa fa-angle-down"></i></span>
-
-            <!-- Suggestion: populate this list with fetch and push technique -->
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="javascript:void(0);">Online e-merchant management system - attaching integration with the iOS</a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">Notes on pipeline upgradee</a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">Assesment Report for merchant account</a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="javascript:void(0);"><i class="fa fa-power-off"></i> Clear</a>
+﻿<header id="home">
+    <div class="sticky-nav">
+        <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+        <div id="logo">
+            <a id="goUp" href="" title="ByteIndex"></a>
+        </div>
+        <nav id="menu">
+            <ul id="menu-nav">
+                <li class="current"><a href="#home">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#superiority">技术优势</a></li>
+                <li><a href="#project">解决方案</a></li>
+                <li><a href="#liquidity">点差&amp;流动性</a></li>
+                <li><a href="#regulatory">监管服务</a></li>
+                <li><a href="#contact">联系我们</a></li>
+                <li id="turn" class="language">
+                    <p>语言</p>
+                    <ul class="animated fadeInRight">
+                        <li class="li1" id="li1"><a href="">简体中文</a></li>
+                        <li class="li2" id="li2"><a href="">English</a></li>
+                    </ul>
                 </li>
             </ul>
-            <!-- end dropdown-menu-->
-
-        </div>
-    <!-- end projects dropdown -->
-    }
-    <section id="top-right">
-        @if (@Model is HelperResult)
-        {
-            @Model
-        }
-        else
-        {
-            <div class="pull-right">
-                @Html.Partial("_TopRight")
-            </div>
-        }
-    </section>
+        </nav>
+    </div>
 </header>
-<!-- END HEADER -->
