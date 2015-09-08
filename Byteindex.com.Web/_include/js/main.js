@@ -50,12 +50,20 @@ jQuery(function($){
                 $('#navigation-mobile #menu-nav').attr({'id':'menu-nav-mobile',"class":'menu-nav-mobile'});
                 $('#navigation-mobile #li1').attr('id', 'li1-mobile');
                 $('#navigation-mobile #li2').attr('id', 'li2-mobile');
+                $('#navigation-mobile #li1-news').attr('id', 'li1-mobile-news');
+                $('#navigation-mobile #li2-news').attr('id', 'li2-mobile-news');
 
                 $("#li1-mobile").click(function(){
                     location.href="/"
                 });
                 $("#li2-mobile").click(function(){
                     location.href="/en"
+                });
+                $("#li1-mobile-news").click(function(){
+                    location.href="/page-news.html"
+                });
+                $("#li2-mobile").click(function(){
+                    location.href="/en/page-news.html"
                 });
             }
         }
@@ -293,6 +301,12 @@ jQuery(function($){
         $("#li2").click(function(){
             location.href="/en/"
         });
+        $("#li1-news").click(function(){
+            location.href="/page-news.html"
+        });
+        $("#li2-news").click(function(){
+            location.href="/en/page-news.html"
+        });
     };
 
     /* ==================================================
@@ -370,6 +384,65 @@ jQuery(function($){
             return false;
         });
     };
+    ByteIndex.ObtainNews1=function(){
+        var trs=$(".news-content-1").find("tr");
+        if(trs.length){
+            var trIndex=0;
+            var date=trs.eq(trIndex).children("td").eq(0).html();
+            var url=trs.eq(trIndex).children("td").eq(1).html();
+            var content=trs.eq(trIndex).children("td").eq(2).html();
+            var temp='<li class="animated fadeInUp"><span>'+date+'</span><a href="'+url+'">'+content+'</a></li>';
+            $("#news-1").html(temp);
+            setInterval(function(){
+                trIndex++;
+                if(trIndex>=trs.length){
+                    trIndex=0;
+                }
+                var date=trs.eq(trIndex).children("td").eq(0).html();
+                var url=trs.eq(trIndex).children("td").eq(1).html();
+                var content=trs.eq(trIndex).children("td").eq(2).html();
+                var temp='<li class="animated fadeInUp"><span>'+date+'</span><a href="'+url+'">'+content+'</a></li>';
+                $("#news-1").html(temp);
+            },6000);
+        }
+
+    };
+    ByteIndex.ObtainNews2=function(){
+        var trs=$(".news-content-2").find("tr");
+        var url = window.location.href.split("/");
+        var mes;
+        var flag=parseInt(url.indexOf("en"));
+        if(flag<0){
+            mes="用户："
+        }else{
+            mes="User:"
+        }
+        if(trs.length){
+            var trIndex=0;
+            var time=trs.eq(trIndex).children("td").eq(0).html();
+            var account=trs.eq(trIndex).children("td").eq(1).html();
+            if(account){
+                account=account.replace(/(.{3}).*(.{3})/,"$1*****$2");
+            }
+            var content=trs.eq(trIndex).children("td").eq(2).html();
+            var temp='<li class="animated fadeInUp"><span>'+time+'</span>'+mes+' <span>'+account+'</span><span>'+content+'</span></li>';
+            $("#news-2").html(temp);
+            setInterval(function(){
+                trIndex++;
+                if(trIndex>=trs.length){
+                    trIndex=0;
+                }
+                var time=trs.eq(trIndex).children("td").eq(0).html();
+                var account=trs.eq(trIndex).children("td").eq(1).html();
+                if(account){
+                    account=account.replace(/(.{3}).*(.{3})/,"$1*****$2");
+                }
+                var content=trs.eq(trIndex).children("td").eq(2).html();
+                var temp='<li class="animated fadeInUp"><span>'+time+'</span>用户: <span>'+account+'</span><span>'+content+'</span></li>';
+                $("#news-2").html(temp);
+            },5000);
+        }
+    };
     /* ==================================================
      Init
      ================================================== */
@@ -401,7 +474,8 @@ jQuery(function($){
         ByteIndex.form();
         ByteIndex.imgHover();
         ByteIndex.service();
-
+        ByteIndex.ObtainNews1();
+        ByteIndex.ObtainNews2();
     });
 
     $(window).resize(function(){

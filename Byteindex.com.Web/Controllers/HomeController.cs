@@ -13,15 +13,29 @@ namespace Byteindex.com.Web.Controllers
         public ActionResult Index()
         {
             string path = Server.MapPath("~/log/newslog.txt");
+            List<Models.NewsViewModel> result = new List<Models.NewsViewModel>();
             if (System.IO.File.Exists(path))
             {
                 string[] array = System.IO.File.ReadAllLines(path);
-                List<Models.NewsViewModel> result = ConverToModel(array);
+                result = ConverToModel(array);
             }
             //System.IO.File.ReadAllLines()
-            return View();
+            return View(result.OrderByDescending(e => e.Time).Take(3).ToList());
         }
 
+
+        public ActionResult News()
+        {
+            string path = Server.MapPath("~/log/newslog.txt");
+            List<Models.NewsViewModel> result = new List<Models.NewsViewModel>();
+            if (System.IO.File.Exists(path))
+            {
+                string[] array = System.IO.File.ReadAllLines(path);
+                result = ConverToModel(array);
+            }
+            //System.IO.File.ReadAllLines()
+            return View(result.OrderByDescending(e => e.Time).Take(40).ToList());
+        }
         public List<Models.NewsViewModel> ConverToModel(string[] array)
         {
             List<Models.NewsViewModel> list = new List<Models.NewsViewModel>();
@@ -37,7 +51,7 @@ namespace Byteindex.com.Web.Controllers
                     list.Add(model);
                 }
             }
-            return list.OrderByDescending(e => e.Time).Take(3).ToList();
+            return list;
         }
     }
 }

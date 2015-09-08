@@ -32,14 +32,14 @@ namespace Byteindex.com.Web.Areas.Admin.Controllers
             string contents = System.IO.File.ReadAllText(path);
             contents = contents.Replace("{title}", title).Replace("{content}", content);
             string time = DateTime.Now.ToString("yyyyMMddHHmmss");
-            string saveUrl = Server.MapPath("~/News/" + time);
+            string saveUrl = Server.MapPath("~/News/" + time + ".html");
             System.IO.File.WriteAllText(saveUrl, contents);
             string logpath = Server.MapPath("~/log");
             if (!Directory.Exists(logpath))
             {
                 Directory.CreateDirectory(logpath);
             }
-            string newinfo = time + ".html" + "^_^" + title;
+            string newinfo = time + "^_^" + title;
             string logUrl = Server.MapPath("~/log/newslog.txt");
             System.IO.File.AppendAllText(logUrl, newinfo + "\r\n");
             Response.Write("<script>alert('新闻发布成功');</script>");
