@@ -68,7 +68,6 @@ hr {
 	border-right: none;
 	margin: 50px 0;
 }
-
 .align_left{
 	float:left;
 	margin:0 25px 0 0px!important;
@@ -504,7 +503,7 @@ nav#menu #menu-nav {
 nav#menu #menu-nav>li {
 	list-style: none;
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0 15px;
 }
 
 nav#menu #menu-nav li:first-child {
@@ -613,7 +612,7 @@ nav#menu #menu-nav li a:hover {
 
 .title-page {
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .title-page .title {
@@ -1571,6 +1570,9 @@ footer .credits a{
 .news ul{
     overflow: hidden;
 }
+.news.page{
+    padding:30px 0;
+}
 .news ul li{
     padding-bottom: 0;
 }
@@ -1583,12 +1585,17 @@ footer .credits a{
 .news .news-1-content li{
     margin-top: 5px;
 }
-.news .news-2-content span{
-    margin-right: 5px;
+.news .news-2-content a{
+    margin-left: 25px;
 }
 #about.page{
-    padding: 10px 0 3px 0;
+    padding:30px 0 40px 0;
 }
 #about a:hover,#news a:hover{
     text-decoration: underline;
+}
+.about-content P{
+    line-height: 35px;
+    font-size: 1.0em;
+    margin: 0 10px !important;
 }
