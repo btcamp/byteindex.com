@@ -17,7 +17,7 @@ namespace Byteindex.com.Web.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new {controller="Account", action = "Login", id = UrlParameter.Optional }
             );
         }
     }

@@ -15,6 +15,8 @@ namespace Byteindex.com.Web
             routes.LowercaseUrls = true;
             routes.MapRoute("Default", "{controller}/{action}/{id}", new
             {
+                controller = "Home",
+                action = "Index",
                 id = UrlParameter.Optional
             }).RouteHandler = new DashRouteHandler();
         }

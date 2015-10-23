@@ -1,0 +1,168 @@
+﻿@model List<NewsViewModel>
+
+@{
+    ViewBag.Title = "新闻列表";
+}
+<style>
+        #news li{
+            list-style-type: none;
+        }
+        @@media (min-width: 960px) {
+            #news li{
+                width: 48%;
+                float: left;
+                list-style-type: none;
+                margin-right: 1%;
+            }
+        }
+</style>
+<section style="padding-top:50px">
+    <!-- about Section -->
+    <div id="news" class="page news">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">行业新闻</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="news-1-content">
+                    <ul class="list">
+                        @{
+                            foreach (NewsViewModel item in Model)
+                            {
+                                <li class=""><span>@item.Time.ToString("yyyy-MM-dd")</span><a href="@item.Path">@item.Title</a></li>
+                            }
+                        }
+                        @*<li class=""><span>2015-09-07</span><a href="#">360互联+指数上线 反映市场情绪发现市场价值</a></li>
+                            <li class=""><span>2015-09-06</span><a href="#">数万难民涌入欧洲 美国拒收称只出钱和专家</a></li>
+                            <li class=""><span>2015-09-05</span><a href="#">中国女排以3比1战胜日本女排，自2004年雅典奥运会夺冠后，再次夺得世界冠军。</a></li>
+                            <li class=""><span>2015-09-04</span><a href="#">苏宁万达"绯闻":万达将迎娶易购云店</a></li>*@
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End about Section -->
+    <!-- Contact Section -->
+    <div id="contact" class="page-alternate">
+        <div class="container">
+            <!-- Title Page -->
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">联系我们</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- End Title Page -->
+            <!-- Contact Form -->
+            <div class="row contact">
+                <div class="span6">
+                    <h2 style="font-size: 30px;"><span style="color: #606060;font-style:oblique; ">现在就来了解<strong>Byteindex</strong>的顶尖科技。</span></h2>
+                    <span style="color: #3c3c3c;">
+                        请填妥以下的表格，登记我们的免费外汇经纪商咨询服务<br>
+                        。我们将会尽快与你联系。
+                    </span>
+                    <div class="contact-content">
+                        <ul>
+                            <li><i class="iconfont">&#xe706;</i> : 18680390649 18680357043</li>
+                        </ul>
+                    </div>
+                    <div class="contact-content">
+                        <ul>
+                            <li><i class="iconfont">&#xe65f;</i> : 1365799928 626770319</li>
+                        </ul>
+                    </div>
+                    <div class="contact-content">
+                        <ul>
+                            <li><i class="iconfont">&#xe76e;</i> : Coop@ByteIndex.com </li>
+                        </ul>
+                    </div>
+                    <div class="contact-content">
+                        <ul>
+                            <li><i class="iconfont">&#xe631;</i>：Level 35,Vero Centre 48 Shortland Street,Auckland,New Zealand</li>
+                        </ul>
+                    </div>
+                    <div class="contact-content">
+                        <ul>
+                            <li><i class="iconfont">&#xe631;</i>：成都市锦江区芷泉街6号时代一号908</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="span6">
+                    <form id="contact-form" class="span6 contact-form" action="#">
+                        <p class="contact-name">
+                            <input id="contact_name" class="input" type="text" placeholder=您的名字 value="" name="name" onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','您的名字')" />
+                        </p>
+                        <p class="contact-email">
+                            <input id="contact_email" class="input" type="text" placeholder="您的邮箱" value="" name="email" onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','您的邮箱')" />
+                        </p>
+                        <p class="contact-phone">
+                            <input id="contact_phone" class="input" type="text" placeholder="您的电话" value="" name="phone" onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','您的电话')" />
+                        </p>
+                        <p class="contact-message">
+                            <textarea id="contact_message" class="contact_message input" placeholder="您想了解的信息" name="message" rows="7" cols="40" onfocus="$(this).attr('placeholder','')" onblur="$(this).attr('placeholder','您想了解的信息')"></textarea>
+                        </p>
+                        <p class="contact-submit">
+                            <a id="contact-submit" class="submit">发送信息</a>
+                        </p>
+                    </form>
+                </div>
+                <!-- End Contact Form -->
+            </div>
+        </div>
+    </div>
+    <!-- Contact end -->
+    <!-- service Section -->
+    <div class="service">
+        <div class="online">
+            <img src="/_include/img/service_zh.png" alt="">
+        </div>
+        <div class="qq-content">
+            <div class="qq qq1">
+                <a id="626770319">
+                    <div>
+                        <i class="iconfont">&#xe65f;</i>
+                    </div>
+                    <p>QQ服务1</p>
+                </a>
+            </div>
+            <div class="qq qq2">
+                <a id="1365799928">
+                    <div>
+                        <i class="iconfont">&#xe65f;</i>
+                    </div>
+                    <p>QQ服务2</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- service end -->
+</section>
+@section scripts{
+    <script>
+        $("#link-index").click(function () {
+            location.href = "/"
+        });
+        $("#link-superiority").click(function () {
+            location.href = "/#superiority"
+        });
+        $("#link-project").click(function () {
+            location.href = "/#project"
+        });
+
+        $("#link-about").click(function () {
+            location.href = "/#about"
+        });
+        $("#link-liquidity").click(function () {
+            location.href = "/#liquidity"
+        });
+        $("#llink-regulatory").click(function () {
+            location.href = "/#regulatory"
+        });
+    </script>
+}

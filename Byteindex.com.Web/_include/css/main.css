@@ -503,7 +503,11 @@ nav#menu #menu-nav {
 nav#menu #menu-nav>li {
 	list-style: none;
 	display: inline-block;
+<<<<<<< HEAD
 	margin: 0 20px;
+=======
+	margin: 0 15px;
+>>>>>>> d9dff205ca45b2709b442731a10005ca4733a7a1
 }
 
 nav#menu #menu-nav li:first-child {
@@ -1570,7 +1574,11 @@ footer .credits a{
     overflow: hidden;
 }
 .news.page{
+<<<<<<< HEAD
     padding:20px 0;
+=======
+    padding:30px 0;
+>>>>>>> d9dff205ca45b2709b442731a10005ca4733a7a1
 }
 .news ul li{
     padding-bottom: 0;
@@ -1583,9 +1591,18 @@ footer .credits a{
 }
 .news .news-1-content li{
     margin-top: 5px;
+<<<<<<< HEAD
 }
 .news .news-2-content a{
     margin-left: 25px;
+=======
+}
+.news .news-2-content a{
+    margin-left: 25px;
+}
+#about.page{
+    padding:30px 0 40px 0;
+>>>>>>> d9dff205ca45b2709b442731a10005ca4733a7a1
 }
 #about a:hover,#news a:hover{
     text-decoration: underline;

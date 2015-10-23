@@ -1,59 +1,68 @@
 ﻿<!DOCTYPE html>
-<html lang="en-us" id="@ViewBag.PageId" class="@Settings.CurrentTheme">
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&amp;!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&amp;!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-US">
+<!--<![endif]-->
 <head>
-    <meta charset=" utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ByteIndex在线交易技术实验室-MT4交易系统搭建|二元期权|手机版交易系统|微信微盘交易系统搭建|外汇交易平台搭建|贵金属交易系统搭建-海外公司及海外监管代办</title>
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="ByteIndex是一家外汇机构服务商。可提供正版MT4服务器、Xcore流动性解决方案、二元期权交易系统、微信交易系统、手机交易系统等。并可提供如国内外知名第三方支付接口、高速数据源、贵金属外汇股指期货股票债券等600种可交易资产、CRM客户关系管理系统、FSP、FCA、ASIC等金融机构监管代办、专业多语言网站、5A级机房高性能服务器等增值服务。" />
+    <meta name="keywords" content="byteindex,最新MT4服务器,MT4交易平台,正版MT4系统,二元期权MT4平台,二元期权交易系统,外汇交易系统,流动性支持机构,股指期货,18680390649,18680357043" />
+    <!-- Mobile Specifics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    @Html.Partial("_Style")
+    <style>
+        * {
+            font-family: "微软雅黑",'Source Sans Pro', sans-serif;
+            font-weight: 500;
+        }
 
-    <title> SmartAdmin - MVC5 </title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <!-- Basic Styles -->
-    @Styles.Render("~/content/smartadmin")
-    <!-- FAVICONS -->
-    <link rel="shortcut icon" href="~/content/img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="~/content/img/favicon/favicon.ico" type="image/x-icon">
-
-    <!-- GOOGLE FONT -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
-
-    <!-- Specifying a Webpage Icon for Web Clip
-         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
-    <link rel="apple-touch-icon" href="~/content/img/splash/sptouch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="~/content/img/splash/touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="~/content/img/splash/touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="~/content/img/splash/touch-icon-ipad-retina.png">
-
-    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Startup image for web apps -->
-    <link rel="apple-touch-startup-image" href="~/content/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
-    <link rel="apple-touch-startup-image" href="~/content/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-    <link rel="apple-touch-startup-image" href="~/content/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+        #contact-form input,
+        #contact-form textarea {
+            font-family: "微软雅黑",'Source Sans Pro', sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?d68fe4c583f0f0d719e4a3a55a4ea161";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
-@*<body class="@ViewBag.PageClass @Settings.CurrentTheme">
-    @{ Html.RenderPartial("_Header", RenderSection("topright", false)); }
-    @{ Html.RenderPartialIf("_Aside", Request.IsAuthenticated); }
-    <div id="main" role="main">
-        @{ Html.RenderPartialIf("_Ribbon", Request.IsAuthenticated); }
-        @RenderBody()
+<body>
+    <!-- load -->
+    <div class="ole">
+        <div id="jSplash">
+            <div id="circle"></div>
+        </div>
     </div>
-    @if (Request.IsAuthenticated)
-    {
-        Html.RenderPartial("_Footer");
-        Html.RenderPartialIf("_Tiles", Settings.EnableTiles);
-    }
-    @{ Html.RenderPartial("_Scripts", RenderSection("pagespecific", false)); }
-</body>*@
+    <!-- End load -->
+    <!-- Header -->
+    @Html.Partial("_Header")
+    <!-- Homepage Slider -->
+    @RenderBody()
+    <!-- footer -->
+    @Html.Partial("_Footer")
+    <!-- End Footer -->
+    <!-- Back To Top -->
+    <a id="back-to-top" href="#home">
+        <i class="font-icon-arrow-simple-up"></i>
+    </a>
+    <!-- End Back to Top -->
+    <!-- Js -->
+    @Html.Partial("_Script")
 
-
-
-<body class="@ViewBag.PageClass @Settings.CurrentTheme">
-   
-        @RenderBody()
+    @RenderSection("scripts", false)
 </body>
 </html>
