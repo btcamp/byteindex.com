@@ -50,12 +50,20 @@ jQuery(function($){
                 $('#navigation-mobile #menu-nav').attr({'id':'menu-nav-mobile',"class":'menu-nav-mobile'});
                 $('#navigation-mobile #li1').attr('id', 'li1-mobile');
                 $('#navigation-mobile #li2').attr('id', 'li2-mobile');
+                $('#navigation-mobile #li1-news').attr('id', 'li1-mobile-news');
+                $('#navigation-mobile #li2-news').attr('id', 'li2-mobile-news');
 
                 $("#li1-mobile").click(function(){
                     location.href="/"
                 });
                 $("#li2-mobile").click(function(){
                     location.href="/en"
+                });
+                $("#li1-mobile-news").click(function(){
+                    location.href="/page-news.html"
+                });
+                $("#li2-mobile").click(function(){
+                    location.href="/en/page-news.html"
                 });
             }
         }
@@ -292,6 +300,12 @@ jQuery(function($){
         });
         $("#li2").click(function(){
             location.href="/en/"
+        });
+        $("#li1-news").click(function(){
+            location.href="/page-news.html"
+        });
+        $("#li2-news").click(function(){
+            location.href="/en/page-news.html"
         });
     };
 
@@ -562,7 +576,7 @@ function judgeArr(){
 }
 
 function qqService(qq){
-    var qq_list = new Array('626770319', '1365799928');
+    var qq_list = new Array('626770319');
     //随机
     var qq_i = Math.floor(Math.random()*qq_list.length);
     if(!qq){
