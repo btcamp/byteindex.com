@@ -135,7 +135,7 @@ jQuery(function($){
                 {image : '/_include/img/slider-images/img01.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[0]]+'"><span>'+mes[0]+'</span></div>', thumb : '', url : ''},
                 {image : '/_include/img/slider-images/img02.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[1]]+'"><span><span class="animated bounce">ByteIndex</span>'+mes[1]+'</span></div>', thumb : '', url : ''},
                 {image : '/_include/img/slider-images/img03.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[2]]+'"><span><span class="animated bounce">ByteIndex</span>'+mes[2]+'</span></div>', thumb : '', url : ''},
-                {image : '/_include/img/slider-images/img04.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[3]]+'"><span style="position:relative;top:-45px;font-size: 0.9em;@media (max-width: 500px){{position: relative;top: -70px;}}}">'+mes[3]+'</span></div>', thumb : '', url : ''}
+                {image : '/_include/img/slider-images/img04.jpg', title : '<div class="slide-content animated '+arrAnimationName[arr[3]]+'"><span style="position:relative;top:-45px;font-size: 0.8em;@media (max-width: 500px){{position: relative;top: -70px;}}}">'+mes[3]+'</span></div>', thumb : '', url : ''}
             ],
 
 
